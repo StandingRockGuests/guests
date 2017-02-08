@@ -1,16 +1,36 @@
 (in-package :guests)
 
 (define-story guests (:title "Standing Rock Guests"
-                :imports (("style" guests-style))
-                :scripts (("guests.js" guests-js))
-                :package :guests
-                :modules (:roboto)
-                :page-args (:body-class "fullbleed layout vertical")
-                :publish-directory (guests-file "build/")
-                :cname "standingrockguests.org"
-                :header guests-header
-                :footer guests-footer)
-    ;;  (:style :is "custom-style" :include "iron-flex iron-flex-alignment iron-positioning")
+                      :imports (("style" guests-style))
+                      :scripts (("guests.js" guests-js))
+                      :package :guests
+                      :modules (:roboto :page :echo
+                                        :polymer
+                                :iron-flex-layout :iron-icons
+                                :neon-animatable :neon-animated-pages
+                                :fade-in-animation :fade-out-animation
+                                :paper-ripple :paper-button :paper-icon-button
+                                :paper-header-panel :paper-toolbar)
+                      :page-args (:body-class "fullbleed layout vertical")
+                      :publish-directory (guests-file "build/")
+                      :cname "standingrockguests.org"
+                      :header guests-header
+                      :footer guests-footer)
+  (:style :is "custom-style" :include "iron-flex iron-flex-alignment iron-positioning")
+  (animated-pages :id "pages" :class "flex" :style "padding:20px;"
+    :entry-animation "fade-in-animation"
+    :exit-animation "fade-out-animation"
+    :selected 0
+    (animatable)       ; initial loading shows and transitions to next
+    (animatable (render-front stream))
+    (animatable (render-time stream))
+    )
+
+  (script
+    (when-ready (lambda ()
+                  (setup-routing)
+                  )))
+
   )
 
 (defun guests-header (stream)
@@ -25,8 +45,20 @@
   (concatenate 'string (main)))
 
 (define-script main
+  (defun select-page (index)
+    (let ((pages (id "pages")))
+      (unless (=== (@ pages selected) index)
+        (setf (@ pages selected) index)))
+    ((@ echo render)))
+
+  (defun setup-routing ()
+    (page "/" (lambda () (select-page 1)))
+    (page "/time" (lambda () (select-page 2)))
+    ;; (page "/wiki/:page" (lambda (ctx) (ensure-loaded :marked (select-page 13) (setup-wiki (@ ctx params page)))))
+    ;; (page "/wiki" (lambda () (page "/wiki/Home")))
+    (page (create :hashbang t)))
 
   (defun visit-wiki ()
-    (visit-url "https://github.com/Blue-Sky-Skunkworks/missoula-civic-hackathon-notes/wiki"))
+    (visit-url "https://github.com/StandingRockGuests/StandingRockGuests.github.io/wiki"))
 
 )
