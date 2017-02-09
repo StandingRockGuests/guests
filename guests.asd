@@ -4,12 +4,13 @@
   :author "William Halliburton"
   :license "unknown"
   :serial t
-  :depends-on ("story" "story-module-polymer" "cl-ascii-art")
+  :depends-on ("story" "story-module-polymer" "story-module-suncalc" "cl-ascii-art")
   :components ((:static-file "guests.asd")
                (:file "package")
                (:file "utility")
                (:file "style")
                (:file "front")
                (:file "time")
+               (:file "signs")
                (:file "main")
                (:file "initialize")))
