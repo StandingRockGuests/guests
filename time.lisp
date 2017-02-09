@@ -36,9 +36,24 @@ Moon Before Yule, or Long Night Moon
     (toolbar :class "time"
       (:span :style "margin-left:0px;" :class "title" "The Time")
       (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
-    (:div :style "padding:20px;background:black;" :class "fit layout vertical center-justified"
+    (:div :style "padding:20px;" :class "fit layout vertical center-justified"
           (:center
-           (:div :style "width:630px;height:630px;overflow:hidden;"
-                 (image :alt "The Moon" :style "margin:-200px 0 0 -200px;"
-                        :width 1024 :height 1024 :src "http://api.usno.navy.mil/imagery/moon.png"))))))
+           (:div :id "time")
+           (:div :id "moon")))))
 
+(in-package :story-js)
+
+(define-script moontime
+  (defun update-time ()
+    (let* ((now (new (*date)))
+           (pos (moon-position now))
+           (ill (moon-illumination now)))
+      (story-js:set-html* "time" (format-time now))
+      (story-js:set-html* "moon"
+                          (:table
+                           (:tr (:th "altitude") (:td (round (rad-to-deg (@ pos altitude)))))
+                           (:tr (:th "azimuth") (:td (round (rad-to-deg (@ pos azimuth)))))
+                           (:tr (:th "distance") (:td (round (@ pos distance))))
+                           (:tr (:th "fraction") (:td (@ ill fraction)))
+                           (:tr (:th "phase") (:td (@ ill phase)))
+                           (:tr (:th "angle") (:td (rad-to-deg (@ ill angle)))))))))
