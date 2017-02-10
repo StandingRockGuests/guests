@@ -11,7 +11,7 @@
                                 :fade-in-animation :fade-out-animation
                                 :paper-ripple :paper-button :paper-icon-button
                                         :paper-header-panel :paper-toolbar
-                                        :suncalc)
+                                        :suncalc :wiki)
                       :page-args (:body-class "fullbleed layout vertical")
                       :publish-directory (guests-file "build/")
                       :cname "standingrockguests.org"
@@ -25,7 +25,8 @@
     (animatable)       ; initial loading shows and transitions to next
     (animatable (render-front stream))
     (animatable (render-time stream))
-    (animatable (render-signs stream)))
+    (animatable (render-signs stream))
+    (animatable (render-wiki stream)))
   (script
     (when-ready (lambda ()
                   (setup-routing)
@@ -42,7 +43,7 @@
 (in-package :story-js)
 
 (defun guests-js ()
-  (concatenate 'string (main) (moontime)))
+  (concatenate 'string (main) (moontime) (wikisetup)))
 
 (define-script main
   (defun select-page (index)
@@ -55,8 +56,6 @@
     (page "/" (lambda () (select-page 1)))
     (page "/time" (lambda () (update-time) (select-page 2)))
     (page "/signs" (lambda () (select-page 3)))
-    ;; (page "/wiki/:page" (lambda (ctx) (ensure-loaded :marked (select-page 13) (setup-wiki (@ ctx params page)))))
-    ;; (page "/wiki" (lambda () (page "/wiki/Home")))
     (page (create :hashbang t)))
 
   (defun visit-wiki ()
