@@ -17,4 +17,7 @@
        (:--paper-fab :color black)
        :--paper-fab-keyboard-focus-background ,(color yellow 100 t))
 
+      (".sign" :cursor pointer :padding 5px)
+
+      (".sn" :padding 20px)
       )))

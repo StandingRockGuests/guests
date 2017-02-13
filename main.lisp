@@ -7,10 +7,12 @@
                       :modules (:roboto :page :echo
                                         :polymer
                                 :iron-flex-layout :iron-icons
+                                :iron-collapse
                                 :neon-animatable :neon-animated-pages
                                 :fade-in-animation :fade-out-animation
                                 :paper-ripple :paper-button :paper-icon-button
                                         :paper-header-panel :paper-toolbar
+                                        :paper-item :paper-listbox
                                         :suncalc :wiki)
                       :page-args (:body-class "fullbleed layout vertical")
                       :publish-directory (guests-file "build/")
@@ -29,10 +31,7 @@
     (animatable (render-wiki stream)))
   (script
     (when-ready (lambda ()
-                  (setup-routing)
-                  )))
-
-  )
+                  (setup-routing)))))
 
 (defun guests-header (stream)
   (comment (as-string (text "Welcome to S'Rock Guests!" :font "emboss2"))))
@@ -43,7 +42,7 @@
 (in-package :story-js)
 
 (defun guests-js ()
-  (concatenate 'string (main) (moontime) (wikisetup)))
+  (concatenate 'string (main) (moontime) (wikisetup) (signs)))
 
 (define-script main
   (defun select-page (index)

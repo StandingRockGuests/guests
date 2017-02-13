@@ -7,9 +7,9 @@
  ("absent" "Make signs for SIT and NO.")
  ("abuse"
   "(meaning: throwing lies against one). Bring right 2 hand in front of mouth; move the hand sharply outwards or towards person indicated; repeat.")
- ("accompany" "See WITH.") ("accost" "Make the sign for QUESTION.")
- ("accost"
-  "(meaning: to question). When party is at some distance hold right hand well up and wave to right and left two or three times.")
+ ("accompany" "See WITH.")
+ ("accost" "Make the sign for QUESTION.
+  (meaning: to question). When party is at some distance hold right hand well up and wave to right and left two or three times.")
  ("ache"
   "(meaning: the darting sensations of pain). Push the right index finger over and parallel to the part afflicted; then make the sign for SICK.")
  ("across"
