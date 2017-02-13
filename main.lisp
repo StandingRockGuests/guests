@@ -18,7 +18,8 @@
                       :publish-directory (guests-file "build/")
                       :cname "standingrockguests.org"
                       :header guests-header
-                      :footer guests-footer)
+                      :footer guests-footer
+                      :dispatches ((:folder "/wiki-data/" *wiki-directory*)))
   (:style :is "custom-style" :include "iron-flex iron-flex-alignment iron-positioning")
   (animated-pages :id "pages" :class "flex" :style "padding:20px;"
     :entry-animation "fade-in-animation"
@@ -55,6 +56,7 @@
     (page "/" (lambda () (select-page 1)))
     (page "/time" (lambda () (update-time) (select-page 2)))
     (page "/signs" (lambda () (select-page 3)))
+    (page "/wiki" (lambda () (select-page 4)))
     (page (create :hashbang t)))
 
   (defun visit-wiki ()

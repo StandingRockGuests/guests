@@ -1,5 +1,7 @@
 (in-package :guests)
 
+(defparameter *wiki-directory* (guests-file "wiki/"))
+
 (defun render-wiki (stream)
   (header-panel :mode "seamed"
     (toolbar :class "time"
@@ -25,4 +27,5 @@
               :title-id "wiki-title"
               :body-id "wiki-body")
   (page "/wiki/:page" (lambda (ctx) (fetch-wiki-page (@ ctx params page))))
-  (page "/wiki" (lambda () (page "/wiki/Home"))))
+  (page "/wiki" (lambda () (page "/wiki/Home")))
+  )
