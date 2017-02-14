@@ -56,7 +56,8 @@
     (page "/" (lambda () (select-page 1)))
     (page "/time" (lambda () (update-time) (select-page 2)))
     (page "/signs" (lambda () (select-page 3)))
-    (page "/wiki" (lambda () (select-page 4)))
+    (page "/wiki/:page" (lambda (ctx) (select-page 4) (fetch-wiki-page (@ ctx params page))))
+    (page "/wiki" (lambda () (select-page 4) (page "/wiki/Home")))
     (page (create :hashbang t)))
 
   (defun visit-wiki ()

@@ -25,7 +25,5 @@
   (setup-wiki :title "Standing Rock Guests Wiki"
               :url "/wiki-data/"
               :title-id "wiki-title"
-              :body-id "wiki-body")
-  (page "/wiki/:page" (lambda (ctx) (fetch-wiki-page (@ ctx params page))))
-  (page "/wiki" (lambda () (page "/wiki/Home")))
-  )
+              :body-id "wiki-body"
+              :prefix "wiki/"))
