@@ -12,7 +12,7 @@
                                 :fade-in-animation :fade-out-animation
                                 :paper-ripple :paper-button :paper-icon-button
                                         :paper-header-panel :paper-toolbar
-                                        :paper-item :paper-listbox
+                                :paper-item :paper-listbox :paper-drawer-panel
                                         :suncalc :wiki)
                       :page-args (:body-class "fullbleed layout vertical")
                       :publish-directory (guests-file "build/")
