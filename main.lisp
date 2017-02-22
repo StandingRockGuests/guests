@@ -4,16 +4,16 @@
                       :imports (("style" guests-style))
                       :scripts (("guests.js" guests-js))
                       :package :guests
-                      :modules (:roboto :page :echo
-                                        :polymer
+                      :modules (:roboto :page :echo :polymer
                                 :iron-flex-layout :iron-icons
                                 :iron-collapse
                                 :neon-animatable :neon-animated-pages
                                 :fade-in-animation :fade-out-animation
                                 :paper-ripple :paper-button :paper-icon-button
-                                        :paper-header-panel :paper-toolbar
+                                :paper-header-panel :paper-toolbar
                                 :paper-item :paper-listbox :paper-drawer-panel
-                                        :suncalc :wiki)
+                                :paper-card
+                                :suncalc :wiki :vis)
                       :page-args (:body-class "fullbleed layout vertical")
                       :publish-directory (guests-file "build/")
                       :cname "standingrockguests.org"
@@ -29,7 +29,9 @@
     (animatable (render-front stream))
     (animatable (render-time stream))
     (animatable (render-signs stream))
-    (animatable (render-wiki stream)))
+    (animatable (render-wiki stream))
+    (animatable (render-timeline stream))
+    (animatable (render-quotes stream)))
   (script
     (when-ready (lambda ()
                   (setup-routing)))))
@@ -58,6 +60,8 @@
     (page "/signs" (lambda () (select-page 3)))
     (page "/wiki/:page" (lambda (ctx) (select-page 4) (fetch-wiki-page (@ ctx params page))))
     (page "/wiki" (lambda () (select-page 4) (page "/wiki/Home")))
+    (page "/timeline" (lambda () (select-page 5)))
+    (page "/quotes" (lambda () (select-page 6)))
     (page (create :hashbang t)))
 
   (defun visit-wiki ()

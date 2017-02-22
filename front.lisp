@@ -7,4 +7,6 @@
     (button :onclick "page(\"/time\");" "time")
     (button :onclick "page(\"/signs\");" "sign language")
     (button :onclick "page(\"/wiki\");" "wiki")
+    (button :onclick "page(\"/quotes\");" "quotes")
+    (button :onclick "page(\"/timeline\");" "timeline")
     ))
