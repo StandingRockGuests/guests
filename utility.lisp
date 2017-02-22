@@ -11,3 +11,7 @@
                                                 :if-does-not-exist :create)
      ,@body))
 
+(defun run-program-to-string (program args)
+  (with-output-to-string (str)
+    (asdf/run-program:run-program (format nil "~A ~{~A~^ ~}" program args) :output str)))
+
