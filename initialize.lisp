@@ -3,7 +3,7 @@
 (require 'story-modules)
 
 (defun initialize ()
-  (load-signs)
+  (load-data-files)
   (story:initialize-story)
   (story:story "guests")
   (format t "Welcome to Standing Rock Guests!~%")

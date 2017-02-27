@@ -15,3 +15,28 @@
   (with-output-to-string (str)
     (asdf/run-program:run-program (format nil "~A ~{~A~^ ~}" program args) :output str)))
 
+(defun mkstr (&rest args)
+  (with-output-to-string (s)
+    (dolist (a args) (when a (princ a s)))))
+
+(defun symb (&rest args)
+  (values (intern (apply #'mkstr args))))
+
+(defun ksymb (&rest args)
+  (values (intern (apply #'mkstr args) :keyword)))
+
+(defvar *data-files* nil)
+
+(defmacro defdataloader (name)
+  (let ((var (symb '* name '*)))
+    `(progn
+       (defvar ,var nil)
+       (pushnew ,var *data-files*)
+       (defun ,(symb 'load- name) ()
+           (let ((raw (read-from-string
+                       (slurp-file (guests-file ,(format nil "data/~(~A~)-data.lisp" name))))))
+             (setf ,var raw))))))
+
+(defun load-data-files ()
+  (iter (for name in *data-files*)
+    (funcall (symb 'load- name))))

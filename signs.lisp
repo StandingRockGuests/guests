@@ -1,10 +1,6 @@
 (in-package :guests)
 
-(defvar *signs* nil)
-
-(defun load-signs ()
-  (let ((raw (read-from-string (slurp-file (guests-file "signs-data.lisp")))))
-    (setf *signs* raw)))
+(defdataloader signs)
 
 (defun render-signs (stream)
   (header-panel :mode "seamed"

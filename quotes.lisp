@@ -1,10 +1,6 @@
 (in-package :guests)
 
-(defvar *quotes* nil)
-
-(defun load-quotes ()
-  (let ((raw (read-from-string (slurp-file (guests-file "quotes-data.lisp")))))
-    (setf *quotes* raw)))
+(defdataloader quotes)
 
 (defun render-quotes (stream)
   (header-panel :mode "seamed"
