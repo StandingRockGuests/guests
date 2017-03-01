@@ -1,0 +1,36 @@
+* TODO lakota dictionary
+* TODO Plains signlanguage
+* TODO wiki fleshout
+* TODO moon drawing
+** TODO D3js
+   https://github.com/d3/d3
+** TODO Raphaeil
+** TODO pixijs
+* bower
+  https://bower.io/
+  $ npm install -g bower
+  bower install PACKAGE --save
+* mapping
+** leaflet
+   https://github.com/Leaflet/Leaflet
+   npm install -g jake
+   npm install
+
+   Now that you have everything installed, run jake build inside the
+   Leaflet directory. This will combine and compress the Leaflet
+   source files, saving the build to the dist folder.
+** https://github.com/tilemill-project/tilemill
+   git clone https://github.com/tilemill-project/tilemill.git
+   cd tilemill
+   npm install
+** OpenMapTiles
+   https://github.com/openmaptiles/openmaptiles-tools
+*** TODO Download 6G
+    https://openmaptiles.os.zhdk.cloud.switch.ch/v3.3/extracts/united_states_of_america.mbtiles
+** https://github.com/tbicr/OfflineMap
+* TODO timeline
+* TODO Treates
+** http://treatiesportal.unl.edu/
+** http://avalon.law.yale.edu/subject_menus/ntreaty.asp
+** Fort Laramie Treaty, 1868
+   http://avalon.law.yale.edu/19th_century/nt001.asp

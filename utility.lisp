@@ -31,7 +31,7 @@
   (let ((var (symb '* name '*)))
     `(progn
        (defvar ,var nil)
-       (pushnew ,var *data-files*)
+       (pushnew ',name *data-files*)
        (defun ,(symb 'load- name) ()
            (let ((raw (read-from-string
                        (slurp-file (guests-file ,(format nil "data/~(~A~)-data.lisp" name))))))

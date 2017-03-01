@@ -45,7 +45,7 @@
 (in-package :story-js)
 
 (defun guests-js ()
-  (concatenate 'string (main) (moontime) (wikisetup) (signs)))
+  (concatenate 'string (main) (moontime) (wikisetup) (signs) (timeline-js)))
 
 (define-script main
   (defun select-page (index)
@@ -60,7 +60,7 @@
     (page "/signs" (lambda () (select-page 3)))
     (page "/wiki/:page" (lambda (ctx) (select-page 4) (fetch-wiki-page (@ ctx params page))))
     (page "/wiki" (lambda () (select-page 4) (page "/wiki/Home")))
-    (page "/timeline" (lambda () (select-page 5)))
+    (page "/timeline" (lambda () (setup-timeline) (select-page 5)))
     (page "/quotes" (lambda () (select-page 6)))
     (page (create :hashbang t)))
 

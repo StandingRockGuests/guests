@@ -12,6 +12,7 @@
                (:file "front")
                (:file "time")
                (:file "signs")
+               (:file "quotes")
                (:file "wiki")
                (:file "main")
                (:file "initialize")))
