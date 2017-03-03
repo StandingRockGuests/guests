@@ -6,10 +6,6 @@
    https://github.com/d3/d3
 ** TODO Raphaeil
 ** TODO pixijs
-* bower
-  https://bower.io/
-  $ npm install -g bower
-  bower install PACKAGE --save
 * mapping
 ** leaflet
    https://github.com/Leaflet/Leaflet
@@ -34,3 +30,19 @@
 ** http://avalon.law.yale.edu/subject_menus/ntreaty.asp
 ** Fort Laramie Treaty, 1868
    http://avalon.law.yale.edu/19th_century/nt001.asp
+* TODO transportation
+* TODO connect with NYC stands with standing rock
+The NYC Stands for Standing Rock committee is a group of Indigenous
+scholars and activists, and settler/ PoC supporters. We belong and are
+responsible to a range of Indigenous peoples and nations, including
+Tlingit, Haudenosaunee, Secwepemc, St’at’imc, Creek (Muscogee),
+Anishinaabe, Peoria, Diné, Maya Kaqchikel, and Quechua. We have joined
+forces to support the Standing Rock Sioux in their continued assertion
+of sovereignty over their traditional territories. We welcome the
+support and participation of Indigenous peoples and allied
+environmental/ community/ social justice organizations in the New York
+area. If you can offer your organization’s support, please email
+NYCnoDAPL@gmail.com to let us know how you would like to be
+involved. Connect with us on Twitter @NYCnoDAPL and our Facebook page
+NYC Stands with Standing Rock.
+

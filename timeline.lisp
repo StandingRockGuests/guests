@@ -25,8 +25,12 @@
                          ,@(loop for el in guests::*timeline*
                                  for index from 1
                                  collect
-                                 (destructuring-bind (y m d text) el
-                                   `(create :id ,index :content ,text :start ,(format nil "~A-~A-~A" y m d))))))))))))))
+                                 (destructuring-bind (y text) el
+                                   `(create :id ,index
+                                            :content ,text
+                                            :start ,(format nil "~A" y)))))))
+                  (create :start "1492" :end "2020")
+                  )))))))
 
 (export 'timeline-js)
 

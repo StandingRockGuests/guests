@@ -1,6 +1,34 @@
 (in-package :guests)
 
-(defun parse-timeline-file (&optional (filename (guests-file "timelines/usdakotawar_org.html")))
+(defun save-timeline-file ()
+  (with-output-to-file ((guests-file "data/timeline-data.lisp"))
+    (prin1 (parse-timeline-file))))
+
+(defun parse-timeline-file (&optional (filename (guests-file "timelines/NYC-syllibus.html")))
+  (labels ((trim (string)
+             (substitute #\space #\no-break_space
+                         (string-trim '(#\newline #\space #\no-break_space #\tab) string)) )
+           (parse-date (string)
+             (destructuring-bind (from . to) (split-sequence #\- string)
+               (cond
+                 (to (list (trim from) (trim (car to))))
+                 (t (trim from))))))
+    (iter (for entry in (cddr (fourth (chtml:parse (slurp-file filename) (chtml:make-lhtml-builder)))))
+      (when (consp entry)
+        (let ((date (parse-date (third (third entry))))
+              (p
+                (with-output-to-string (str)
+                  (iter (for el in (cdddr entry))
+                    (when (consp el)
+                      (cond
+                        ((string-equal (car el) :span)
+                         (unless (or (null (third el)) (= (length (third el)) 1))
+                           (princ (third el) str)))
+                        ((string-equal (car el) :i)
+                         (format str "<i>~A</i>" (third (third el))))))))))
+          (collect (list date p)))))))
+
+(defun old-parse-timeline-file (&optional (filename (guests-file "timelines/usdakotawar_org.html")))
   (labels ((trim (string)
              (substitute #\space #\no-break_space
                          (string-trim '(#\newline #\space #\no-break_space #\tab) string)) )
@@ -27,6 +55,3 @@
       (nreverse acc))))
 
 
-(defun save-timeline-file ()
-  (with-output-to-file ((guests-file "data/timeline-data.lisp"))
-    (prin1 (parse-timeline-file))))
