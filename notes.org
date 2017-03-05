@@ -6,25 +6,6 @@
    https://github.com/d3/d3
 ** TODO Raphaeil
 ** TODO pixijs
-* mapping
-** leaflet
-   https://github.com/Leaflet/Leaflet
-   npm install -g jake
-   npm install
-
-   Now that you have everything installed, run jake build inside the
-   Leaflet directory. This will combine and compress the Leaflet
-   source files, saving the build to the dist folder.
-** https://github.com/tilemill-project/tilemill
-   git clone https://github.com/tilemill-project/tilemill.git
-   cd tilemill
-   npm install
-** OpenMapTiles
-   https://github.com/openmaptiles/openmaptiles-tools
-*** TODO Download 6G
-    https://openmaptiles.os.zhdk.cloud.switch.ch/v3.3/extracts/united_states_of_america.mbtiles
-** https://github.com/tbicr/OfflineMap
-* TODO timeline
 * TODO Treates
 ** http://treatiesportal.unl.edu/
 ** http://avalon.law.yale.edu/subject_menus/ntreaty.asp
@@ -45,4 +26,27 @@ area. If you can offer your organization’s support, please email
 NYCnoDAPL@gmail.com to let us know how you would like to be
 involved. Connect with us on Twitter @NYCnoDAPL and our Facebook page
 NYC Stands with Standing Rock.
+* TODO mapping
+** leaflet
+   https://github.com/Leaflet/Leaflet
+   npm install -g jake
+   npm install
 
+   Now that you have everything installed, run jake build inside the
+   Leaflet directory. This will combine and compress the Leaflet
+   source files, saving the build to the dist folder.
+** https://github.com/tilemill-project/tilemill
+   git clone https://github.com/tilemill-project/tilemill.git
+   cd tilemill
+   npm install
+** OpenMapTiles
+   https://github.com/openmaptiles/openmaptiles-tools
+*** TODO Download 6G
+    https://openmaptiles.os.zhdk.cloud.switch.ch/v3.3/extracts/united_states_of_america.mbtiles
+** https://github.com/tbicr/OfflineMap
+* TODO raphael
+* TODO image location selector
+* TODO prism syntax hilighting
+* TODO github access
+* TODO vis network
+* TODO timeline

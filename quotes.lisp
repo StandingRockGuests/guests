@@ -14,6 +14,6 @@
               (:div :class "card-content quote" :style "max-width:500px;"
                     (:div :class "text" "“" (esc text) "”")
                     (:div :class "attr"
-                     (:div :class "name" "— " (esc name))
-                     (:div :class "desc" (esc desc)))))))))
+                          (:div :class "name" "— " (esc name))
+                          (:div :class "desc" (esc desc)))))))))
 
