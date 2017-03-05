@@ -7,17 +7,21 @@
     (toolbar :class "time"
       (:span :style "margin-left:0px;" :class "title" "Sign Language")
       (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
-    (listbox
-      (iter (for (name text) in *signs*)
-        (for index from 1)
-        (htm (:div :class "sign"
-               :onclick (ps* `(toggle-sign ,index))
-
-               (str (if (consp name) (format nil "~{~A~^/~}" name) name))
-               (collapse :id (format nil "sn-~A" index)
-                 (:div :class "sn"
-                  (if (stringp text) (esc text)
-                      (esc (car text)))))))))))
+    (:div :id "signs"
+          (iter (for el in *signs*)
+            (for index from 1)
+            (destructuring-bind (name image pos text)
+                (if (= (length el) 2)
+                    (list (first el) nil nil (second el))
+                    el)
+              (card :class "sign"
+                (:div :class "card-content"
+                      :onclick (ps* `(toggle-sign ,index))
+                      (str (if (consp name) (format nil "~{~A~^/~}" name) name))
+                      (collapse :id (format nil "sn-~A" index)
+                        (:div :class "sn"
+                              (if (stringp text) (esc text)
+                                  (esc (car text))))))))))))
 
 (in-package :story-js)
 

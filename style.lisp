@@ -17,7 +17,7 @@
        (:--paper-fab :color black)
        :--paper-fab-keyboard-focus-background ,(color yellow 100 t))
 
-      (".sign" :cursor pointer :padding 5px)
+      (".sign" :cursor pointer :margin 5px :max-width 400px)
 
       (".sn" :padding 20px)
 
@@ -29,5 +29,8 @@
       (".quotes" :padding 20px)
       (".quote" :padding 20px)
       (".quote .attr" :text-align :right :padding-top 20px)
+
+      ;; timeline-entry
+      (".te" :width 200px :height 200px :white-space wrap)
 
       )))

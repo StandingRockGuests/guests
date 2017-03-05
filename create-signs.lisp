@@ -10,10 +10,11 @@
                       (string-downcase raw-name))))
           (collect
               (list name
-               (if (= (length el) 4)
-                   (substitute #\space #\newline (string-left-trim '(#\space) (fourth el)))
-                   (iter (for p in (cdddr el))
-                     (unless (consp p) (collect (string-left-trim '(#\space) p))))))))))))
+                    ()
+                    (if (= (length el) 4)
+                        (substitute #\space #\newline (string-left-trim '(#\space) (fourth el)))
+                        (iter (for p in (cdddr el))
+                          (unless (consp p) (collect (string-left-trim '(#\space) p))))))))))))
 
 
 (defun save-signs-file ()
@@ -25,7 +26,7 @@
     (asdf/run-program:run-program (format nil "~A ~{~A~^ ~}" program args) :output str)))
 
 (defun extract-pdf-page (page)
-  (asdf/run-program:run-program (format nil "pdfimages -png -f ~A -l ~A ~A ~A" page page (guests-file "docs/indian-signs.pdf") (guests-file "generated/signs"))))
+  (asdf/run-program:run-program (format nil "pdfimages -png -f ~A -l ~A ~A ~A" page page (guests-file "docs/indian-signs.pdf") (guests-file (format nil "generated/signs-~A" page)))))
 
 (defun split-signs-image (page &optional (width 960) (height 900) (dx 348) (dy 432))
   (ensure-directories-exist (guests-file "generated/"))
