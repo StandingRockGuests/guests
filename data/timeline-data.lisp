@@ -119,7 +119,7 @@
   "Congress passes the American Indian Civil Rights Act (loosely modeled on the protection the U.S. Constitution provides against state and local governments). It provides individual Indians with some statutory protection against their tribal governments.")
  ("1969"
   "Occupation of Alcatraz by American Indian Movement to reclaim traditional land. Simultaneously, sit-ins are staged at the offices of the BIA.")
- (("1960s" "1970s") " Creation of tribal colleges.")
+ (("1960" "1979") " Creation of tribal colleges.")
  ("1970"
   "In a special message to Congress on Indian Affairs, President Richard Nixon calls for the repeal of termination laws and the inauguration of the era of self-determination through self-help and community programming.")
  ("1971"

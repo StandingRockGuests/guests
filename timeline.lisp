@@ -9,6 +9,12 @@
       (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
     (:div :class "timeline" :id "timeline")))
 
+(defun render-timeline-entry (y text)
+  (with-output-to-string (stream)
+    (card
+      (:div :class "te card-content"
+            (esc text)))))
+
 (in-package :story-js)
 
 (defun timeline-js ()
@@ -27,9 +33,12 @@
                                  collect
                                  (destructuring-bind (y text) el
                                    `(create :id ,index
-                                            :content ,text
-                                            :start ,(format nil "~A" y)))))))
-                  (create :start "1492" :end "2020")
+                                            :content ,(guests::render-timeline-entry y text)
+                                            :start ,(format nil "~A" (if (consp y) (first y) y))
+                                            ,@(when (consp y)
+                                                `(:end ,(format nil "~A" (second y))))
+                                            ))))))
+                  (create :start "1492" :end "2020" :width "100%")
                   )))))))
 
 (export 'timeline-js)

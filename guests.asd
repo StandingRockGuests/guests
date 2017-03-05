@@ -14,5 +14,6 @@
                (:file "signs")
                (:file "quotes")
                (:file "wiki")
+               (:file "timeline")
                (:file "main")
                (:file "initialize")))
