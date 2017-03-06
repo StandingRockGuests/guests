@@ -8,5 +8,6 @@
     (button :onclick "page(\"/signs\");" "sign language")
     (button :onclick "page(\"/wiki\");" "wiki")
     (button :onclick "page(\"/quotes\");" "quotes")
+    (button :onclick "page(\"/photos\");" "photos")
     (button :onclick "page(\"/timeline\");" "timeline")
     ))

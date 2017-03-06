@@ -1,0 +1,15 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/student/p/guests/notes.org
+
+
+* bower
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2017-03-03 Fri 12:08
+  :ARCHIVE_FILE: ~/p/guests/notes.org
+  :ARCHIVE_CATEGORY: notes
+  :END:
+  https://bower.io/
+  $ npm install -g bower
+  bower install PACKAGE --save

@@ -12,14 +12,15 @@
                                 :paper-ripple :paper-button :paper-icon-button
                                 :paper-header-panel :paper-toolbar
                                 :paper-item :paper-listbox :paper-drawer-panel
-                                :paper-card
+                                :paper-card :images
                                 :suncalc :wiki :vis)
                       :page-args (:body-class "fullbleed layout vertical")
                       :publish-directory (guests-file "build/")
                       :cname "standingrockguests.org"
                       :header guests-header
                       :footer guests-footer
-                      :dispatches ((:folder "/wiki-data/" *wiki-directory*)))
+                      :dispatches ((:folder "/wiki-data/" *wiki-directory*)
+                                   (:folder "/photos/" *photo-directory*)))
   (:style :is "custom-style" :include "iron-flex iron-flex-alignment iron-positioning")
   (animated-pages :id "pages" :class "flex" :style "padding:20px;"
     :entry-animation "fade-in-animation"
@@ -31,7 +32,8 @@
     (animatable (render-signs stream))
     (animatable (render-wiki stream))
     (animatable (render-timeline stream))
-    (animatable (render-quotes stream)))
+    (animatable (render-quotes stream))
+    (animatable (render-photos stream)))
   (script
     (when-ready (lambda ()
                   (setup-routing)))))
@@ -62,6 +64,7 @@
     (page "/wiki" (lambda () (select-page 4) (page "/wiki/Home")))
     (page "/timeline" (lambda () (setup-timeline) (select-page 5)))
     (page "/quotes" (lambda () (select-page 6)))
+    (page "/photos" (lambda () (select-page 7)))
     (page (create :hashbang t)))
 
   (defun visit-wiki ()

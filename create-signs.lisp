@@ -33,7 +33,7 @@
   (extract-pdf-page page)
   (iter (for row from 0 to 4)
     (iter (for col from 0 to 2)
-      (asdf/run-program:run-program
+      (run-program
        (format nil "convert ~A -crop ~Ax~A+~A+~A ~A"
                (guests-file "generated/signs-000.png")
                width height

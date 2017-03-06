@@ -5,8 +5,10 @@
     `(
 
       (":root"
-       :--primary-color ,(color purple 500)
-       :--light-primary-color ,(color blue 500)
+       :background black
+       :color white
+       :--primary-color ,(color blue-grey 900)
+       :--light-primary-color ,(color blue-grey 300)
        :--accent-color ,(color yellow 200 t)
 
        :--paper-toolbar-color white
@@ -14,10 +16,10 @@
 
        :--paper-spinner-color white
 
-       (:--paper-fab :color black)
+       (:--paper-fab :color white)
        :--paper-fab-keyboard-focus-background ,(color yellow 100 t))
 
-      (".sign" :cursor pointer :margin 5px :max-width 400px)
+      (".sign" :cursor pointer :margin 5px :max-width 400px :color black)
 
       (".sn" :padding 20px)
 
