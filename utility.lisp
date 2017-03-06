@@ -33,9 +33,11 @@
        (defvar ,var nil)
        (pushnew ',name *data-files*)
        (defun ,(symb 'load- name) ()
-           (let ((raw (read-from-string
-                       (slurp-file (guests-file ,(format nil "data/~(~A~)-data.lisp" name))))))
-             (setf ,var raw))))))
+         (let ((filename (guests-file ,(format nil "data/~(~A~)-data.lisp" name))))
+           (setf ,var
+                 (if (probe-file filename)
+                     (read-from-string (slurp-file filename))
+                     (warn "Missing data file ~S." filename))))))))
 
 (defun load-data-files ()
   (iter (for name in *data-files*)

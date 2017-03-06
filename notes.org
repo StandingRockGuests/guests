@@ -50,3 +50,20 @@ NYC Stands with Standing Rock.
 * TODO github access
 * TODO vis network
 * TODO timeline
+* TODO create supply chain graph
+** Oil Refinery
+*** PET - Polyethylene terephthalate
+** Monazite
+   + Mines
+   + Refinery
+       https://en.wikipedia.org/wiki/Monazite#/media/File:Hydrometallury_of_rare_earth_metals_from_monazite_ore_process_flow_diagram.jpg
+*** Ferrocerium
+*** Thorium
+** Ferroalloys
+   https://minerals.usgs.gov/minerals/pubs/commodity/ferroalloys/myb1-2006-feall.pdf
+** Bisphenol A (BPA)
+   https://en.wikipedia.org/wiki/Bisphenol_A
+*** 'tin' cans
+* TODO recipes
+  http://www.pimatisiwin.com/online/wp-content/uploads/2013/07/06Gendron.pdf
+* TODO photos
