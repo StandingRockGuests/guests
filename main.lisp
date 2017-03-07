@@ -12,7 +12,7 @@
                                 :paper-ripple :paper-button :paper-icon-button
                                 :paper-header-panel :paper-toolbar
                                 :paper-item :paper-listbox :paper-drawer-panel
-                                :paper-card :images
+                                :paper-card :images :packery
                                 :suncalc :wiki :vis)
                       :page-args (:body-class "fullbleed layout vertical")
                       :publish-directory (guests-file "build/")
@@ -63,7 +63,7 @@
     (page "/wiki/:page" (lambda (ctx) (select-page 4) (fetch-wiki-page (@ ctx params page))))
     (page "/wiki" (lambda () (select-page 4) (page "/wiki/Home")))
     (page "/timeline" (lambda () (setup-timeline) (select-page 5)))
-    (page "/quotes" (lambda () (select-page 6)))
+    (page "/quotes" (lambda () (select-page 6) (pack "quotes")))
     (page "/photos" (lambda () (select-page 7)))
     (page (create :hashbang t)))
 

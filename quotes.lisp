@@ -7,10 +7,10 @@
     (toolbar :class "time"
       (:span :style "margin-left:0px;" :class "title" "Quotes")
       (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
-    (:div :class "quotes"
+    (:div :class "quotes" :id "quotes"
           (iter (for (text name desc) in *quotes*)
             (for index from 1)
-            (card
+            (card :class "pack"
               (:div :class "card-content quote" :style "max-width:500px;"
                     (:div :class "text" "“" (esc text) "”")
                     (:div :class "attr"
