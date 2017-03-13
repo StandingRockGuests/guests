@@ -22,13 +22,16 @@
           str)))
 
   (defun create-photo (parent row)
-    (set-html* (create-element "paper-card" parent "pack")
-               ((:div :class "card-content photo")
-                (when (@ row thumbnail)
-                  (ps-html ((:img :src (+ "data:" (@ row mime) ";base64," (@ row thumbnail))))))
-                (when (@ row comment)
-                  (ps-html ((:div :class "attr")
-                            ((:div :class "desc") (trim-comment (@ row comment)))))))))
+    (let ((card (create-element "paper-card" parent "pack")))
+      (on "click"
+          (set-html* card
+                     ((:div :class "card-content photo")
+                      (when (@ row thumbnail)
+                        (ps-html ((:img :src (+ "data:" (@ row mime) ";base64," (@ row thumbnail))))))
+                      (when (@ row comment)
+                        (ps-html ((:div :class "attr")
+                                  ((:div :class "desc") (trim-comment (@ row comment))))))))
+          (funcall *select-row-fn* row))))
 
   (defun show-photos ()
     (select-page 7)
