@@ -13,14 +13,14 @@
                                 :paper-header-panel :paper-toolbar
                                 :paper-item :paper-listbox :paper-drawer-panel
                                 :paper-card :images :packery
-                                :suncalc :wiki :vis)
+                                :suncalc :wiki :vis :files)
                       :page-args (:body-class "fullbleed layout vertical")
                       :publish-directory (guests-file "build/")
                       :cname "standingrockguests.org"
                       :header guests-header
                       :footer guests-footer
-                      :dispatches ((:folder "/wiki-data/" *wiki-directory*)
-                                   (:folder "/photos/" *photo-directory*)))
+                      :directories ("signs" "photos")
+                      :dispatches ((:folder "/wiki-data/" *wiki-directory*)))
   (:style :is "custom-style" :include "iron-flex iron-flex-alignment iron-positioning")
   (animated-pages :id "pages" :class "flex" :style "padding:20px;"
     :entry-animation "fade-in-animation"
@@ -47,7 +47,7 @@
 (in-package :story-js)
 
 (defun guests-js ()
-  (concatenate 'string (main) (moontime) (wikisetup) (signs) (timeline-js)))
+  (concatenate 'string (main) (moontime) (wikisetup) (signs) (timeline-js) (photos)))
 
 (define-script main
   (defun select-page (index)
@@ -64,7 +64,7 @@
     (page "/wiki" (lambda () (select-page 4) (page "/wiki/Home")))
     (page "/timeline" (lambda () (setup-timeline) (select-page 5)))
     (page "/quotes" (lambda () (select-page 6) (pack "quotes")))
-    (page "/photos" (lambda () (select-page 7)))
+    (page "/photos" show-photos)
     (page (create :hashbang t)))
 
   (defun visit-wiki ()

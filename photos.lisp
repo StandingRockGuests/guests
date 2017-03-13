@@ -2,35 +2,41 @@
 
 (defparameter *photo-directory* (guests-file "photos/"))
 
-(defvar *photos* nil)
-(pushnew 'photos *data-files*)
-
-(defun load-photos (&key set-comments clean)
-  (setf *photos*
-        (iter (for file in (directory-files (guests-file "photos/")))
-          (when clean (clean-image file))
-          (collect (list (format nil "~A.~A" (pathname-name file) (pathname-type file))
-                         (or (image-comment file)
-                             (and set-comments
-                                  (progn
-                                    (format t "comment for ~S: " (pathname-name file))
-                                    (force-output)
-                                    (set-image-comment file (read-line))))))))))
-
 (defun render-photos (stream)
   (header-panel :mode "seamed"
     (toolbar :class "time"
       (:span :style "margin-left:0px;" :class "title" "Photos")
       (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
-    (:div :class "photos"
-          (iter (for (name desc) in *photos*)
-            (for index from 1)
-            (card
-              (:div :class "card-content photo" :style "max-width:500px;"
-                    (image :src (format nil "photos/~A" name))
-                    (:div :class "attr"
-                          (:div :class "desc" (esc desc)))))))))
+    (:div :id "photos")))
 
-(defun create-image-thumbnail (name &optional (width 200) (height 200))
+(defun create-photos-file-listing ()
+  (save-file-listing (guests-file "photos/")))
 
-  )
+(in-package :story-js)
+
+(define-script photos
+  (defun trim-comment (str)
+    (let ((pos ((@ str search) ",")))
+      (if (> pos 0)
+          ((@ str substr) 0 pos)
+          str)))
+
+  (defun create-photo (parent row)
+    (set-html* (create-element "paper-card" parent "pack")
+               ((:div :class "card-content photo")
+                (when (@ row thumbnail)
+                  (ps-html ((:img :src (+ "data:" (@ row mime) ";base64," (@ row thumbnail))))))
+                (when (@ row comment)
+                  (ps-html ((:div :class "attr")
+                            ((:div :class "desc") (trim-comment (@ row comment)))))))))
+
+  (defun show-photos ()
+    (select-page 7)
+    (render-file-listing "photos" "photos" :rerender t
+                                           :parent-type "div" :class-name "grid"
+                                           :parent-id "photo-grid"
+                                           :create-controls-fn nil
+                                           :create-headings-fn nil
+                                           :create-row-fn create-photo)
+    (pack "photo-grid")))
+

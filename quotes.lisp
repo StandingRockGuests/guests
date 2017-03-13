@@ -7,7 +7,7 @@
     (toolbar :class "time"
       (:span :style "margin-left:0px;" :class "title" "Quotes")
       (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
-    (:div :class "quotes" :id "quotes"
+    (:div :id "quotes"
           (iter (for (text name desc) in *quotes*)
             (for index from 1)
             (card :class "pack"

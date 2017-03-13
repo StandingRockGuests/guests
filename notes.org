@@ -12,40 +12,7 @@
 ** Fort Laramie Treaty, 1868
    http://avalon.law.yale.edu/19th_century/nt001.asp
 * TODO transportation
-* TODO connect with NYC stands with standing rock
-The NYC Stands for Standing Rock committee is a group of Indigenous
-scholars and activists, and settler/ PoC supporters. We belong and are
-responsible to a range of Indigenous peoples and nations, including
-Tlingit, Haudenosaunee, Secwepemc, St’at’imc, Creek (Muscogee),
-Anishinaabe, Peoria, Diné, Maya Kaqchikel, and Quechua. We have joined
-forces to support the Standing Rock Sioux in their continued assertion
-of sovereignty over their traditional territories. We welcome the
-support and participation of Indigenous peoples and allied
-environmental/ community/ social justice organizations in the New York
-area. If you can offer your organization’s support, please email
-NYCnoDAPL@gmail.com to let us know how you would like to be
-involved. Connect with us on Twitter @NYCnoDAPL and our Facebook page
-NYC Stands with Standing Rock.
-* TODO mapping
-** leaflet
-   https://github.com/Leaflet/Leaflet
-   npm install -g jake
-   npm install
-
-   Now that you have everything installed, run jake build inside the
-   Leaflet directory. This will combine and compress the Leaflet
-   source files, saving the build to the dist folder.
-** https://github.com/tilemill-project/tilemill
-   git clone https://github.com/tilemill-project/tilemill.git
-   cd tilemill
-   npm install
-** OpenMapTiles
-   https://github.com/openmaptiles/openmaptiles-tools
-*** TODO Download 6G
-    https://openmaptiles.os.zhdk.cloud.switch.ch/v3.3/extracts/united_states_of_america.mbtiles
-** https://github.com/tbicr/OfflineMap
 * TODO raphael
-* TODO image location selector
 * TODO prism syntax hilighting
 * TODO github access
 * TODO vis network
@@ -67,3 +34,76 @@ NYC Stands with Standing Rock.
 * TODO recipes
   http://www.pimatisiwin.com/online/wp-content/uploads/2013/07/06Gendron.pdf
 * TODO photos
+* TODO write Brandon Ferguson (34447)
+  Mike Durfee State Prison
+  1012 Wood Street
+  Springfield, SD 57062
+* TODO read Teton Times
+* TODO research Mike Bostock
+  https://bl.ocks.org/mbostock
+  https://bost.ocks.org/mike/
+* TODO mapping
+** leaflet
+   https://github.com/Leaflet/Leaflet
+   npm install -g jake
+   npm install
+
+   Now that you have everything installed, run jake build inside the
+   Leaflet directory. This will combine and compress the Leaflet
+   source files, saving the build to the dist folder.
+** https://github.com/tilemill-project/tilemill
+   git clone https://github.com/tilemill-project/tilemill.git
+   cd tilemill
+   npm install
+** OpenMapTiles
+   https://github.com/openmaptiles/openmaptiles-tools
+*** TODO Download 6G
+    https://openmaptiles.os.zhdk.cloud.switch.ch/v3.3/extracts/united_states_of_america.mbtiles
+** https://github.com/tbicr/OfflineMap
+** https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c#.3sl1fe14a
+
+   http://www2.census.gov/geo/tiger/GENZ2015/shp/
+
+   npm install -g shapefile
+   npm install -g d3-geo-projection
+
+   shp2json cb_2014_06_tract_500k.shp -o ca.json
+
+   geoproject 'd3.geoConicEqualArea().parallels([34,
+   40.5]).rotate([120, 0]).fitSize([960, 960], d)' < ca.json >
+   ca-albers.json
+
+   geo2svg -w 960 -h 960 < ca-albers.json > ca-albers.svg
+* TODO image location selector
+* TODO research image thumbnail creation
+* TODO Lakhota word-finders
+  /academy/research/wordsearch-1.4.1
+* TODO Lakhota crossword puzzles
+** TODO qxw
+** TODO xword
+* TODO fabric
+  https://devpost.com/software/built-with/fabric-js
+  https://github.com/kangax/fabric.js/wiki/When-to-call-setCoords
+
+** TODO resizable canvas or sized to available space
+* TODO connect with NYC stands with standing rock
+The NYC Stands for Standing Rock committee is a group of Indigenous
+scholars and activists, and settler/ PoC supporters. We belong and are
+responsible to a range of Indigenous peoples and nations, including
+Tlingit, Haudenosaunee, Secwepemc, St’at’imc, Creek (Muscogee),
+Anishinaabe, Peoria, Diné, Maya Kaqchikel, and Quechua. We have joined
+forces to support the Standing Rock Sioux in their continued assertion
+of sovereignty over their traditional territories. We welcome the
+support and participation of Indigenous peoples and allied
+environmental/ community/ social justice organizations in the New York
+area. If you can offer your organization’s support, please email
+NYCnoDAPL@gmail.com to let us know how you would like to be
+involved. Connect with us on Twitter @NYCnoDAPL and our Facebook page
+NYC Stands with Standing Rock.
+* TODO Sat March 11 Article
+  http://missoulian.com/news/local/missoulians-protest-construction-of-dakota-access-pipeline/article_7944638e-01f1-5ca9-885d-96a6df511aaf.html
+** TODO Feather Sherman
+** TODO George Price
+** TODO Joseph Grady (UM Branch Center director)
+** TODO Nikole Loran (FB)
+
