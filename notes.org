@@ -106,4 +106,7 @@ NYC Stands with Standing Rock.
 ** TODO George Price
 ** TODO Joseph Grady (UM Branch Center director)
 ** TODO Nikole Loran (FB)
-
+* TODO cl-oneliner
+* TODO cl-sentiment
+* TODO cl-spark
+* TODO draw-cons-tree

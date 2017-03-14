@@ -35,7 +35,7 @@
 
   (defun show-photos ()
     (select-page 7)
-    (render-file-listing "photos" "photos" :rerender t
+    (render-file-listing "photos" "/photos/" :rerender t
                                            :parent-type "div" :class-name "grid"
                                            :parent-id "photo-grid"
                                            :create-controls-fn nil
