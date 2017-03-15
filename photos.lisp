@@ -6,7 +6,8 @@
   (header-panel :mode "seamed"
     (toolbar :class "time"
       (:span :style "margin-left:0px;" :class "title" "Photos")
-      (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
+      (icon-button :class "toolbar-icon" :style "margin-left:0px;"
+        :icon "arrow-back" :onclick "page(\"/\");"))
     (:div :id "photos")))
 
 (defun create-photos-file-listing ()
@@ -21,8 +22,14 @@
           ((@ str substr) 0 pos)
           str)))
 
-  (defun create-photo (parent row)
+  (defun select-photo (container card row)
+    (show-image-gallery (@ container images) (@ card index)))
+
+  (defun create-photo (parent row index)
     (let ((card (create-element "paper-card" parent "pack")))
+      (setf (@ card row) row
+            (@ card row url) (row-url row)
+            (@ card index) index)
       (on "click"
           (set-html* card
                      ((:div :class "card-content photo")
@@ -31,15 +38,23 @@
                       (when (@ row comment)
                         (ps-html ((:div :class "attr")
                                   ((:div :class "desc") (trim-comment (@ row comment))))))))
-          (funcall *select-row-fn* row))))
+          (select-photo (@ parent parent-node) card row))))
+
+  (defun create-image-array (rows)
+    (loop for row in rows
+          collect (create :src (@ row url) :w (@ row width) :h (@ row height)
+                          :title (@ row comment))))
 
   (defun show-photos ()
     (select-page 7)
-    (render-file-listing "photos" "/photos/" :rerender t
-                                           :parent-type "div" :class-name "grid"
-                                           :parent-id "photo-grid"
-                                           :create-controls-fn nil
-                                           :create-headings-fn nil
-                                           :create-row-fn create-photo)
-    (pack "photo-grid")))
+    (render-file-listing
+     "photos" "/photos/"
+     :parent-type "div" :class-name "grid" :parent-id "photo-grid"
+     :create-controls-fn nil :create-headings-fn nil
+     :create-row-fn create-photo
+     :continuation (lambda (el)
+                     (setf (@ el images) (create-image-array (@ el rows)))
+                     (pack "photo-grid")))
+
+))
 

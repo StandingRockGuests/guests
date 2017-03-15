@@ -13,7 +13,8 @@
                                 :paper-header-panel :paper-toolbar
                                 :paper-item :paper-listbox :paper-drawer-panel
                                 :paper-card :images :packery
-                                :suncalc :wiki :vis :files)
+                                :suncalc :wiki :vis :files
+                                :photoswipe)
                       :page-args (:body-class "fullbleed layout vertical")
                       :publish-directory (guests-file "build/")
                       :cname "standingrockguests.org"
