@@ -14,7 +14,7 @@
                                 :paper-item :paper-listbox :paper-drawer-panel
                                 :paper-card :images :packery
                                 :suncalc :wiki :vis :files
-                                :photoswipe)
+                                :image-gallery)
                       :page-args (:body-class "fullbleed layout vertical")
                       :publish-directory (guests-file "build/")
                       :cname "standingrockguests.org"
@@ -29,11 +29,16 @@
     :selected 0
     (animatable)       ; initial loading shows and transitions to next
     (animatable (render-front stream))
-    (animatable (render-time stream))
-    (animatable (render-signs stream))
-    (animatable (render-wiki stream))
-    (animatable (render-timeline stream))
-    (animatable (render-quotes stream))
+    (animatable ; (render-time stream)
+      )
+    (animatable ;(render-signs stream)
+      )
+    (animatable ; (render-wiki stream)
+      )
+    (animatable ; (render-timeline stream)
+      )
+    (animatable ; (render-quotes stream)
+      )
     (animatable (render-photos stream)))
   (script
     (when-ready (lambda ()
