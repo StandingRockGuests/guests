@@ -50,7 +50,7 @@
  ("alliance"
   "Make sign for PEACE, and if for war purposes add signs GOING, WAR, WITH.")
  ("all right" "Make sign for ALL and sign for GOOD.")
- ("alone" 16 nil
+ ("alone"
   "Hold right 1 hand upwards in front of neck.  Then move outwards in sinuous motion.")
  ("always" "Make the sign for FOREVER.")
  ("ambitious" "Make sign for the person and sign for PUSH.")

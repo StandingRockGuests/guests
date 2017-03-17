@@ -110,3 +110,8 @@ NYC Stands with Standing Rock.
 * TODO cl-sentiment
 * TODO cl-spark
 * TODO draw-cons-tree
+* TODO black-tie noise
+* TODO cl-anonfun
+* TODO cl-arxiv-api
+* TODO ditaa
+* TODO bacteria
