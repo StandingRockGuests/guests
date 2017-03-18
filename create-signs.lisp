@@ -16,14 +16,9 @@
                         (iter (for p in (cdddr el))
                           (unless (consp p) (collect (string-left-trim '(#\space) p))))))))))))
 
-
 (defun save-signs-file ()
   (with-output-to-file ((guests-file "signs-data.lisp"))
     (prin1 (parse-signs-file))))
-
-(defun run-program-to-string (program args)
-  (with-output-to-string (str)
-    (asdf/run-program:run-program (format nil "~A ~{~A~^ ~}" program args) :output str)))
 
 (defun extract-pdf-page (page)
   (asdf/run-program:run-program (format nil "pdfimages -png -f ~A -l ~A ~A ~A" page page (guests-file "docs/indian-signs.pdf") (guests-file (format nil "generated/signs-~A" page)))))

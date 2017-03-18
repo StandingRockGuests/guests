@@ -50,22 +50,22 @@
  ("alliance"
   "Make sign for PEACE, and if for war purposes add signs GOING, WAR, WITH.")
  ("all right" "Make sign for ALL and sign for GOOD.")
- ("alone"
+ ("alone" 16 (89 110 233 219)
   "Hold right 1 hand upwards in front of neck.  Then move outwards in sinuous motion.")
  ("always" "Make the sign for FOREVER.")
  ("ambitious" "Make sign for the person and sign for PUSH.")
- ("among"
+ ("among" 16 (330 110 233 219)
   "Bring extended left 5 hand ten inches from breast, then weave right index through fingers of left.")
  ("ancestors"
   "Most Indians usually make sign for OLD PEOPLE. Some add LONG TIME.")
  ("and" "Make the sign for WITH.")
- ("angry"
+ ("angry" 16 (570 110 233 219)
   "(meaning: mind twisted). Place closed right hand close to forehead, with back of thumb touching same; move hand slightly outwards and by wrist action give small twisting motion.")
  ("annihilate" "See EXTERMINATE.")
  ("annoy"
   "(meaning: fluttering heart). Make the sign for HEART. Then flutter the 5 hand over the heart.")
  ("annuities" "Make the sign for BLANKET, for FOOD and for DISTRIBUTE.")
- ("another"
+ ("another" 16 (87 342 233 219)
   "Place compressed right hand over left breast, sweep hand upwards, outwards to right and downwards ending with back down.")
  ("antelope"
   "(meaning: pronged horns of animals). Hold both 4 hands beside head, palms forward.")
@@ -75,27 +75,27 @@
   "Pass both 4 hands over such position of body as is necessary to explain the clothing.")
  ("arapahoe"
   "Indian (meaning: MOTHER of all Tribes). First make sign for Indian, then with compressed right hand tap left breast two or three times, which is the MOTHER sign.")
- ("arise"
+ ("arise" 16 (326 344 233 219)
   "(meaning: to get up). Right 1 hand with back down, pointed to front, raise mostly by wrist action until back is outwards and index points upwards.")
  ("arrange" "Make signs for WORK and FIX.")
- ("arrest"
+ ("arrest" 16 (563 341 233 219)
   "(meaning: to seize hold of and tie at wrist). With both hands in front of body make as though seizing hold of a person.  Then cross the wrists, hands closed.")
- ("arrive here"
+ ("arrive here" 16 (86 572 233 222)
   "Place flat left hand against left breast with back out. Hold right hand one foot from body, then bring same briskly against back of left.")
- ("arrive there"
+ ("arrive there" 16 (322 576 233 222)
   "This is the reverse of previous sign. The left flat hand is held out in front; the right 1 hand held against breast, strikes out to palm of left.")
- ("arrow"
+ ("arrow" 16 (570 579 233 222)
   "(meaning: drawing an arrow from left hand). Near left breast, hold left cupped hand, then indicate drawing an arrow from same.")
  ("artillery man"
   "Make sign for WHITE MAN, for SOLDIER, for WITH, and for CANNON.")
- ("ascend"
+ ("ascend" 16 (85 808 233 222)
   "Indicate in what way and what was ascended; for instance, a mountain, sign same with left hand, place right 1 hand with index on left wrist and gradually move same upward.")
- ("ashamed"
+ ("ashamed" 16 (322 810 233 222)
   "(meaning: drawing blanket over face). Both flat hands-opposite either cheek, backs outward. Cross right hand to left and left hand to right.")
- ("astonish"
+ ("astonish" 16 (564 814 233 222)
   "Palm of left hand held over mouth. Many Indians also raise right hand. This gesture denotes great surprise, great pleasure, or great disappointment.")
  ("astray" "Make the sign for HIDE.")
- ("astride"
+ ("astride" 16 (79 1043 233 222)
   "Separate first and second fingers of right hand and set them astride of upright flat left hand.")
  ("attack" "Make sign for CHARGE.")
  ("attempt" "Make the signs for WORK and PUSH.") ("attention" "See QUESTION.")
@@ -104,9 +104,9 @@
   "Make the sign for WAGON and then imitate holding steering wheel. (Another modern sign understood by Indians.) A Cheyenne Indian used the signs WAGON, BY ITSELF, GO.")
  ("autumn"
   "(meaning: falling leaf time). Make sign for TREE, for LEAF. Then let right hand pass slowly downwards to right with wavy motion.")
- ("avoid"
+ ("avoid" 16 (319 1045 233 222)
   "Hold I hands in front of shoulders pointing upwards.  Pass right hand to left and left hand to right and have them miss in passing.")
- ("awl"
+ ("awl" 16 (558 1050 233 222)
   "From manner of using same in sewing with sinew.    Use right index as an awl and bore over left index.")
  ("axe"
   "Hold right elbow with left hand, extend right arm with hand held flat, and make as though chopping.")

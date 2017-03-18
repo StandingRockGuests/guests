@@ -20,15 +20,15 @@
          (card :class "sign"
            (:div :class "card-content"
                  :onclick (ps* `(toggle-sign ,index))
-                 (str (if (consp name) (format nil "~{~A~^/~}" name) name))
+                 (if image
+                   (destructuring-bind (x y w h) pos
+                     (htm (:div
+                           :style (format nil "width:~Apx;height:~Apx;" w h)
+                           (:img
+                            :style (format nil "position:absolute;clip:rect(~Apx,~Apx,~Apx,~Apx);margin-left:-~Apx;margin-top:-~Apx" y (+ x w) (+ y h) x x y)
+                            :src (format nil "/signs/s~A.png" image)))))
+                   (str (if (consp name) (format nil "~{~A~^/~}" name) name)))
                  (collapse :id (format nil "sn-~A" index)
-                   (when image
-                     (destructuring-bind (x y w h) pos
-                       (htm (:div
-                             :style (format nil "width:~Apx;height:~Apx;" w h)
-                             (:img
-                              :style (format nil "position:absolute;clip:rect(~Apx,~Apx,~Apx,~Apx);margin-left:-~Apx;margin-top:-~Apx" y (+ x w) (+ y h) x x y)
-                              :src (format nil "/signs/s~A.png" image))))))
                    (:div :class "sn"
                          (if (stringp text) (esc text)
                              (esc (car text))))))))))))

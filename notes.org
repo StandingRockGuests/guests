@@ -115,3 +115,4 @@ NYC Stands with Standing Rock.
 * TODO cl-arxiv-api
 * TODO ditaa
 * TODO bacteria
+* TODO cl-freetype2 for cl-ascii-art
