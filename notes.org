@@ -116,3 +116,5 @@ NYC Stands with Standing Rock.
 * TODO ditaa
 * TODO bacteria
 * TODO cl-freetype2 for cl-ascii-art
+* TODO parchment
+* TODO file type icons
