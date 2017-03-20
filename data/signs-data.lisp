@@ -214,15 +214,15 @@
  ("bring" 20 (579 1050 236 221)
   "Move the right 1 hand well in front of body, index extended, then draw hand towards body, while curving index finger.")
  ("broad" "Make the sign for BIG.")
- ("brother"
+ ("brother" 22 (87 107 228 229)
   "Bring tips of extended and touching first and second fingers of right hand against lips, fingers horizontal, back up, carry hand straight out from mouth, then make sign for MAN.")
- ("brother-in-law"
+ ("brother-in-law" 22 (335 104 228 229)
   "Cross arms on breasts, left arm inside, hands extended, then strike downwards in front with right hand.")
  ("brook" "Make the sign for RIVER and SMALL.")
  ("brown" "Make the sign for COLOR, then point to something BROWN.")
  ("brush"
   "Hold the hands as for GRASS, but with arms extended outward from the waist.")
- ("buffalo"
+ ("buffalo" 22 (578 102 228 229)
   "(meaning: horns of buffalo). Bring partly closed hands, palms inward, close to sides of head. Raise hands slightly until wrists are on edges of head, and carry slightly forward.")
  ("buffalo robe" "Make sign for BUFFALO and for BLANKET.")
  ("burn"
@@ -230,77 +230,77 @@
  ("bury" "Make the signs for BLANKET, WRAP and DIG.")
  ("but" "Make the sign for PERHAPS.")
  ("buy" "Make sign for MONEY and for EXCHANGE.")
- ("by and by"
+ ("by and by" 22 (86 339 228 229)
   "Make the sign for FUTURE, advancing the right hand past and beyond the left hand. Some Indians make the sign for WAIT.")
- ("by itself"
+ ("by itself" 22 (330 340 240 226)
   "Hold extended right hand in front of right breast, with back down and fingers pointing to front; by wrist action strike the hand to left and towards body with a jerk, repeating two or three times. This is a metaphoric idiom used with other gestures. A gift with this sign becomes a \"free gift.\" No gift expected in return. It also means FREEDOM, ALONE and SOLITARY.")
  ("cache" "Make the sign for HIDE.")
- (("call" "called")
+ (("call" "called") 22 (575 341 240 226)
   "This is an important and much used sign. Use right hand with thumb touching index. Then snap out index finger as in word TALK, but continue extending index. This is used for \"Question you called\"-meaning, \"what are you called\" or \"what is your name.\"")
- ("camp"
+ ("camp" 22 (80 581 491 226)
   "Make the sign for TEEPEE. Then with arms held about horizontal in front of body form with thumbs and indexes an incomplete circle, tips 1 inch apart. Lower the hands briskly few inches by elbow action.")
  ("campfire"
   "Make as though gathering something. Then make the signs for WOOD, FIRE, SIT and TALK.")
  ("candid"
   "Make the sign for TRUE, for DAY and GOOD, indicating openness and clearness like the day, truth and goodness.")
- ("candle"
+ ("candle" 22 (579 581 231 226)
   "Hold left 1 hand in front of left shoulder, index pointing upwards. Make sign for FIRE with right hand pointed at left index and show length of candle on left arm.")
  ("candy"
   "Make sign for SUGAR. Then hold left index vertically in front of body and with right index indicate stripes on same.")
  ("cannon" "(meaning: large gun). Make sign for GUN and for LARGE.")
- ("cannot"
+ ("cannot" 22 (83 812 231 226)
   "(meaning: cannot go through, or bounced back). Hold left flat hand edgewise, well out in front of body. Point right index at center of left, then move right index forward until it strikes left palm, then bounces off and down to right.")
  ("canoe"
   "Make sign for BOAT, then with curved right hand held well out in front of body, indicate the curved bow of canoe.")
- ("canyon"
+ ("canyon" 22 (333 812 231 226)
   "(also GORGE, DEFILE, CHASM, GAP) (meaning: mountain, both sides). Hold both closed hands in front of face-several inches apart, then, still holding left hand in position, make as though to pass the right hand through the chasm.")
- ("cards"
+ ("cards" 22 (581 812 231 226)
   "In nearly closed left hand make as though holding a deck of cards, then with right hand indicate dealing same to several players.")
- ("cartridge"
+ ("cartridge" 22 (82 1044 231 226)
   "Hold right 1 hand back nearly up, in front of body, index extended horizontally and pointing to front, thumb pressing against side of index, with tip just back of second joint indicating cartridge. Sometimes signs for GUN and SHOOT are also made.")
- ("carry"
+ ("carry" 22 (326 1044 231 226)
   "Place thumb side of right fist against right shoulder, then thumb side of left fist against right fist--in other words tandem--stoop slightly forward as though carrying a heavy bag or pack.")
- ("cat"
+ ("cat" 22 (577 1045 231 226)
   "( meaning: flat nose). With right thumb and index touching nose, tilt same slightly upwards, also indicate size of animal.")
  ("catch" "Make the sign for TAKE.")
  ("cattle" "(meaning: spotted buffalo). Make signs for   BUFFALO and SPOTTED.")
  ("cavalryman" "Make signs for WHITE MAN, SOLDIER and RIDE. ")
- ("center"
+ ("center" 24 (84 104 238 228)
   "Make horizontal circle with index fingers and thumbs. Then holding left in same position place point of right index in circle just formed.")
  ("certain" "Make the signs for I, KNOW and GOOD.")
- ("charge"
+ ("charge" 24 (334 106 238 228)
   "(meaning: to charge against others). With backs up place closed hands near right shoulder, move hands sharply to front and left, at same time snapping them open.")
  ("charge"
   "(meaning: charging against us). Reverse the above by holding fists well out YOU in front and snapping hands open towards face.")
  ("cheat" "Make signs for LYING and STEALING.")
- ("cheyenne"
+ ("cheyenne" 24 (580 104 238 228)
   "Indian (meaning: finger choppers). Make sign for INDIAN, then extend left index and with right index make as though to cut or slash same. A sign of mourning.")
  ("chicken"
   "Make sign for BIRD, sign for RED. Then place extended right hand on top of head, indicating comb.")
- ("chief"
+ ("chief" 24 (85 339 238 234)
   "(meaning: elevated, rising above others and looking down at them). Hold right hand at side pointing upwards, raise hand in gradual circle as high as top of head, then arch toward front and downward.")
  ("child"
   "Make the sign for MALE or FEMALE. Then hold compressed right hand upward at right side and drop to the height of the child.")
  ("chippewa" "Indian. Make the signs for TREES and PEOPLE. ")
- ("chop"
+ ("chop" 24 (331 339 238 234)
   "Bring right flat hand near right breast, then by elbow action strike downwards to left, then reverse to left breast and strike downwards to right.")
  ("church" "Make signs for GOD and HOUSE.")
  ("cigar"
   "Make sign for TOBACCO. Then lay both indexes horizontally alongside of each and rotate one around the other (meaning: it's rolled).")
  ("cigarette" "Same as CIGAR but add LITTLE.")
  ("city" "Make the sign for HOUSE and for MANY.")
- ("close"
+ ("close" 24 (577 339 238 234)
   "(meaning: draw near). Slightly curved right hand well out in front of right shoulder, draw hand downwards and in towards body, holding hand flat and up-right.")
- ("cloud"
+ ("cloud" 24 (84 582 238 223)
   "Hold extended hands horizontally, backs up, in front and higher than head, indexes touching; swing hands downwards in curve to each side, to signify dome of sky.")
  ("coal" "Make signs for HARD, FIRE, and GOOD.")
- ("coat"
+ ("coat" 24 (331 585 238 223)
   "Place spread hands on breasts then carry them down as though over garment.")
- ("coffee"
+ ("coffee" 24 (580 583 238 223)
   "(meaning: grinding coffee in mill). Extend left hand, back down, in front of body; bring closed right hand few inches over left and move in small horizontal circle, as though turning a crank.")
- ("cold"
+ ("cold" 24 (83 818 238 223)
   "Both closed hands close to front of body, height of shoulder, body slightly bent. Give tremulous motion to hands and arms as though shivering from cold.")
- ("color"
+ ("color" 24 (327 814 491 227)
   ("Rub tips of right hand fingers in circle on back of
 left. Do not confuse this with the sign for Indian which is made by rubbing back of
 left hand with flat palmar surfaces of all the right hand fingers. A popular sign
@@ -311,7 +311,7 @@ backs of the hands together. This represents any spotted or off color."))
  ("consider" "See PERHAPS.")
  ("comanche"
   "Indian (meaning: snake). Make the sign for INDIAN and for SNAKE, pushing right 1 hand outwards with sinuous motion.")
- ("come" "Extend right 1 hand then sweep same toward face.")
+ ("come" 24 (84 1055 229 217) "Extend right 1 hand then sweep same toward face.")
  ("commence" "Make the sign for PUSH.")
  ("compass"
   "Points of the compass are shown by the way an Indian records the sun. Thumb and index of right hand held across at left side indicates the sun rising in the east. In this manner the right side would indicate west, straight ahead would indicate south, and conversely would be north. A somewhat modern conception given by a leading Sioux authority.")
@@ -319,9 +319,9 @@ backs of the hands together. This represents any spotted or off color."))
  ("congress"
   "Make sign for BIG WHITE CHIEF'S HOUSE. Sign for BRING, from several directions, and sign for SITTING IN COUNCIL.")
  ("cook" "Make sign for MAKE (or WORK) and EAT (or FOOD).")
- ("corn"
+ ("corn" 24 (332 1055 239 217)
   "(meaning: shelling the corn). Project left index and thumb as though they were an car of corn, then twist them with right index and thumb.")
- ("corral"
+ ("corral" 24 (578 1052 239 217)
   "Make sign for TREE, lock fingers of right and left hands, then indicate circular enclosure by bringing them separately left and right in semi-circle.")
  ("council"
   "(meaning: sitting in a circle and talking). Closed hands well out in front of body, little fingers touching, move hands in horizontal circle towards body to meet with backs to body--then add TALK to right and left.")

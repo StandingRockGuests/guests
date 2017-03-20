@@ -12,7 +12,7 @@
     (:div
      :id "signs"
      (iter (for el in *signs*)
-       (for index from 1 to 100)
+       (for index from 1 to 200)
        (destructuring-bind (name image pos text)
            (if (= (length el) 2)
                (list (first el) nil nil (second el))
