@@ -31,8 +31,9 @@
     (animatable (render-front stream))
     (animatable ; (render-time stream)
       )
-    (animatable ;(render-signs stream)
-      )
+    (animatable (render-signs stream
+                              '("great mystery" "work" "sunrise" "you" "heart")
+                              ))
     (animatable ; (render-wiki stream)
       )
     (animatable ; (render-timeline stream)

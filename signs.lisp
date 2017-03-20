@@ -4,15 +4,20 @@
 
 (defdataloader signs)
 
-(defun render-signs (stream)
+(defun signs-sentence (strings)
+  (iter (for string in strings)
+    (collect (assoc string *signs* :test #'equal))))
+
+(defun render-signs (stream &optional (sentence))
   (header-panel :mode "seamed"
     (toolbar :class "time"
       (:span :style "margin-left:0px;" :class "title" "Sign Language")
       (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
     (:div
      :id "signs"
-     (iter (for el in *signs*)
-       (for index from 1 to 200)
+     (iter (for el in (if sentence (signs-sentence sentence) *signs*))
+       (for index from 1 ;to 200
+            )
        (destructuring-bind (name image pos text)
            (if (= (length el) 2)
                (list (first el) nil nil (second el))
