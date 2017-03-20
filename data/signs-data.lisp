@@ -1,32 +1,32 @@
-(("abandon"
+(("abandon" 14 (89 301 238 182)
   "(meaning: throw away). With both closed hands held at left side near breast, drop them downwards and to rear, at same time opening them as though expelling some article.")
- ("aboard"
+ ("aboard" 14 (335 303 238 182)
   "(meaning; sitting down on). Hold left hand flat, ten inches from body, palm up. Place right fist on left palm, with little finger down.")
- ("above"
+ ("above" 14 (578 303 238 182)
   "(meaning one thing above another). Both hands backs up in front of body, the right resting on the left. Then raise the right more or less above the left.")
  ("absent" "Make signs for SIT and NO.")
- ("abuse"
+ ("abuse" 14 (86 490 238 182)
   "(meaning: throwing lies against one). Bring right 2 hand in front of mouth; move the hand sharply outwards or towards person indicated; repeat.")
  ("accompany" "See WITH.")
  ("accost" "Make the sign for QUESTION.
   (meaning: to question). When party is at some distance hold right hand well up and wave to right and left two or three times.")
- ("ache"
+ ("ache" 14 (334 491 238 182)
   "(meaning: the darting sensations of pain). Push the right index finger over and parallel to the part afflicted; then make the sign for SICK.")
- ("across"
+ ("across" 14 (576 490 238 182)
   "The flat left hand, with back up, is held about twelve inches out from body. Then pass the partially compressed right hand over left on a curve.")
- ("add"
+ ("add" 14 (86 675 238 182)
   "Place right flat hand on palm of left in front of body, and lift them upwards several times in moves of about 3 inches, to indicate piling up.")
- ("advance"
+ ("advance" 14 (332 678 238 182)
   "Point right flat hand forward, palm down, ten inches from body. Bring left hand in same position but between right hand and body.  Then move both hands forward in slight jerks.")
  ("advance guard"
   "(The person in front). Left flat hand ten inches from center of body. Right 1 hand in front of left pointing upwards, then change to 2 hand, and move around to indicate LOOKING.")
- ("afraid"
+ ("afraid" 14 (574 676 238 182)
   "(meaning: shrinks back from). Bring both 1 hands well out in front of breast; bring hands back a few inches and slightly downwards, while curving index fingers. Usually only right hand is used in making this sign.")
  ("afraid of no one"
   "Point right index in several directions; then make signs for AFRAID and NO.")
- (("after" "future time")
+ (("after" "future time") 14 (83 863 238 182)
   "Make sign for TIME, then advance the right 1 hand past and beyond the left hand.")
- ("afternoon"
+ ("afternoon" 14 (330 864 238 182)
   "Form an incomplete circle with thumb and index of right hand. Then raise toward a point directly overhead, and sweep down towards the horizon.")
  ("age" "Indicate by showing number of winters. (See WINTER.)")
  ("agent"
@@ -37,15 +37,15 @@
   "(meaning: \"From the manner of using weapon\").  If with rifle-aim accordingly; if with bow and arrow--bring hands up before breast with motion of drawing bow string.")
  ("airplane"
   "Extend both arms straight out to each side, sway body imitating motion of plane; then swing hand in a curve from waist towards the sky. Then sign BIRD and EQUAL (a flexible modern sign, understood by Indians).")
- ("alight"
+ ("alight" 14 (572 866 238 182)
   "(to). Indicate whether from horse, wagon, etc.  Then sweep 2 hand towards the ground.")
  ("alike"
   "(meaning: that 2 people look alike). Make the signs for FACE and SAME.")
- ("alive"
+ ("alive" 14 (83 1054 238 182)
   "(meaning: walking about). Bring right 1 hand 10 inches from breast, then by wrist action make 3 zigzags.")
- ("all"
+ ("all" 14 (330 1054 238 182)
   "Move right flat hand in horizontal circle from right to left, breast high.")
- ("all gone"
+ ("all gone" 14 (571 1056 238 182)
   "Point both extended hands at each other in front of breast. Then loosely wipe ends of fingers of right hand across palm and fingers of left, and vice versa.")
  ("alliance"
   "Make sign for PEACE, and if for war purposes add signs GOING, WAR, WITH.")
@@ -108,21 +108,21 @@
   "Hold I hands in front of shoulders pointing upwards.  Pass right hand to left and left hand to right and have them miss in passing.")
  ("awl" 16 (558 1050 233 222)
   "From manner of using same in sewing with sinew.    Use right index as an awl and bore over left index.")
- ("axe"
+ ("axe" 18 (87 101 243 226)
   "Hold right elbow with left hand, extend right arm with hand held flat, and make as though chopping.")
- ("baby"
+ ("baby" 18 (336 101 241 224)
   "Place right closed hand across left wrist, palm side up, in position of holding a baby.")
  ("bachelor" "Make the signs for MAN, MARRY and NO.")
- ("bacon"
+ ("bacon" 18 (580 101 240 223)
   "Bring extended left hand in front of breast pointing outwards; with right thumb and index clasp base of little finger and rub towards wrist and back again 2 or 3 times; then make the sign for EAT.")
- ("bad"
+ ("bad" 18 (83 339 240 223)
   "(meaning: thrown away). Hold right fist near breast. Throw it out and down to right, and while doing so open the hand.")
- ("bag"
+ ("bag" 18 (334 339 240 223)
   "Hold left hand in form of opening of bag; then pass compressed right hand into opening. Finish by indicating sides of bag. Demonstrate a large bag by inside of circled arm.")
  ("bald"
   "Make the sign for HAIR. Touch top of head with flat hand. Then make sign WIPED OUT.")
  ("barracks" "Make the signs for WHITE SOLDIER and HOUSE.")
- ("bashful" "Make sign for ASHAMED.")
+ ("bashful" 18 (579 337 240 223) "Make sign for ASHAMED.")
  ("basin"
   "(meaning: depression in the ground). With both 4 hands form a partial circle, then left hand holds position while compressed right hand scoops the ground.")
  ("basket"
@@ -136,82 +136,82 @@
  ("bayonet"
   "Make sign for GUN. Then place both 1 hands alongside one another, right index projecting beyond.")
  ("be" "Make the sign for SIT.")
- ("bear"
+ ("bear" 18 (85 575 240 223)
   "The Crows and some other tribes hold partly closed hands alongside of head to indicate large ears--Others add to this a clawing motion with hands in front clawing downwards.")
- ("beard"
+ ("beard" 18 (334 573 240 223)
   "For chin whiskers hang compressed hand below chin-for other kinds of whiskers place hands accordingly.")
  ("beautiful"
   "The preference seems to be to pass right flat hand downwards over face, then make sign for GOOD-some tribes hold up left hand and look into it as into a mirror.")
- ("beaver"
+ ("beaver" 18 (578 575 240 223)
   "(meaning: tail of beaver striking mud or water).  Hold left flat hand in front of body, right flat hand below same, then back of right hand strikes up against left palm sharply.")
- ("bed"
+ ("bed" 18 (83 811 240 223)
   "(meaning: spread blankets). Left hand, palm up, fingers extended pointing right front, close to left breast, right hand palm up, on same plane and close to left--move right hand well out in front and to right as though spreading blanket; add sign for SLEEP.")
- (("before" "past time")
+ (("before" "past time") 18 (332 811 240 223)
   "Point right and left I hands, to left, tandem, in position of TIME, then draw right hand towards the right and rear.")
  ("begin" "Make the sign for PUSH.")
  ("behind"
   "(Sense of time.) Make the sign for BEFORE, showing length of time by space between the hands.")
- ("below"
+ ("below" 18 (579 813 240 223)
   "Both hands backs up in front of body, the left resting on the right; then drop the right more or less below the left to indicate desired distance.")
  ("belt" "Use the hands as though clasping on a belt.")
- ("beside" "or BY. Make sign for WITH.")
- ("bet"
+ ("beside" 18 (83 1044 240 223) "or BY. Make sign for WITH.")
+ ("bet" 18 (333 1043 240 223)
   "(meaning: to gamble). Inasmuch as the betting assumes card playing, the sign is made as though placing 2 stacks of money or chips.")
- ("beyond"
+ ("beyond" 18 (577 1043 231 227)
   "Bring extended left hand, back up in front of body about ten inches, fingers pointing to right; bring extended right hand, back up, between left and body, same height, fingers pointing to left; swing the right hand outwards and upwards in curve beyond left hand, turning right hand back down in movement.")
  ("bible" "Make the signs for BOOK, MEDICINE, and GREAT.")
  ("bicycle"
   "A modern sign, like WAGON but with index fingers tandem, then add MAN, ABOARD, GO. Indians vary modern signs.")
- ("big"
+ ("big" 20 (79 103 249 231)
   "Bring compressed 5 hands in front of body, close together, palms in, fingers extended flat, upright, pointing to front, separate the hands-bringing them apart, but keeping them opposite each other.")
- ("bird"
+ ("bird" 20 (334 106 241 224)
   "(meaning: wings). With flat hands at shoulders, imitate motion of wings. Small birds rapidly, large birds slowly.")
  ("bitter"
   "Touch the tongue with tip of index of right hand and make the sign for BAD.")
  ("black"
   "The method most used by Indians is to point to something black. Have seen Indians simply use sign for COLOR as indicating BLACK; others make the sign for COLOR and touch hair or eyebrows.")
  ("black feet" "Indians. Make sign for MOCCASIN and for BLACK.")
- ("blanket"
+ ("blanket" 20 (579 104 239 224)
   "(meaning: wrapping about shoulders). Hold the closed hands at height of shoulders near neck, move the right hand to left, left to right, closing movement when wrists are crossed, right hand nearest body.")
- ("bless you"
+ ("bless you" 20 (85 342 239 224)
   "Raise both hands, palm outward, hands pointing front and upward, lower hands several inches, then push them slightly towards person.")
  ("blind"
   "Place palmar surface of ends of fingers against closed eyes, then sign LOOK and NO.")
- ("blood"
+ ("blood" 20 (336 340 239 224)
   "Bring right hand in front of mouth, first and second fingers against nostrils, move hand downwards with tremulous motion.")
  ("blue"
   "Make the sign for COLOR, then point to something blue in color, preferably the sky when clear.")
  ("bluff"
   "Make the sign for MOUNTAIN, raising or lowering fist to indicate height.")
- ("boat"
+ ("boat" 20 (579 340 239 224)
   "Hollowed hands held together indicate shape of boat, push out in front to show direction; for canoe make as though paddling; for row boat as though rowing; for steamboat add sign for FIRE.")
  ("boil" "(to). Make sign for WATER or FOOD; then sign for KETTLE and FIRE.")
  ("bone"
   "Make sign for the animal for DIE, LONG TIME. Touch part of body that produced bone, then point to something WHITE.")
- ("bonnet"
+ ("bonnet" 20 (84 579 239 224)
   "(war). Carry extended hands from front to rear alongside of head, then carry right hand from crown of head down to below body.")
- ("book"
+ ("book" 20 (332 581 239 224)
   "Hold both hands in front of body, side by side, palms up, and look at them as if reading. Have seen Indians place palms together and open hands as though opening a book.")
  ("borrow"
   "Make the sign for GIVE (to you or to me) then BY and BY or little while, and then GIVE--meaning, \"Give to me a little while and I will give it back.\" They have no such word as loan.")
- ("bow"
+ ("bow" 20 (580 580 239 224)
   "(meaning: bending bow to shoot). Left closed hand well out in front of body as though holding bow. Right closed hand held just back of same draws the bow string.")
- ("bowl" "Indicate shape with curved hands, held close together.")
- ("boy"
+ ("bowl" 20 (82 816 239 224) "Indicate shape with curved hands, held close together.")
+ ("boy" 20 (334 816 239 224)
   "Make the sign for WHITE MAN or INDIAN, as the case may be, then bring right hand down on right side to height of boy, index finger pointing up.")
  ("brain" "Touch forehead with first 2 fingers of right hand.")
  ("brand"
   "With index and thumb of right hand, form partial circle, other fingers closed--then press hand against left shoulder for shoulder brand, or against hip for hip a brand.")
- ("brave"
+ ("brave" 20 (580 814 239 224)
   "Hold left fist 8 inches from center of body, bring right fist six inches above and a little in front of same. Strike downwards with right fist, by elbow action, second joints of right hand passing close to knuckles of left. Some Indians make the signs HEART and STRONG.")
  ("bread"
   "Make sign for FLOUR. Then clap hands together as though making a cake, right hand on top; then reverse and repeat, left hand on top. The Indian method of making small fried bread.")
- ("break"
+ ("break" 20 (81 1047 243 221)
   "(meaning: breaking a stick held horizontally in the closed hands). Hold closed hands together, backs up, then twist right to right, left to left, as though breaking a stick.")
  ("breakfast" "See EAT.")
- ("bridge"
+ ("bridge" 20 (338 1049 236 221)
   "Both flat hands, backs down, pointing to front, then make sign for RIVER and sign for ACROSS.")
- ("bring"
+ ("bring" 20 (579 1050 236 221)
   "Move the right 1 hand well in front of body, index extended, then draw hand towards body, while curving index finger.")
  ("broad" "Make the sign for BIG.")
  ("brother"
