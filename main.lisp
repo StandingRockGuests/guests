@@ -1,7 +1,7 @@
 (in-package :guests)
 
 (define-story guests (:title "Standing Rock Guests"
-                      :imports (("style" guests-style))
+                      :imports (("style" story-css:guests-style))
                       :scripts (("guests.js" guests-js))
                       :package :guests
                       :modules (:roboto :page :echo :polymer

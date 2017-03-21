@@ -45,3 +45,5 @@
       (".te" :width 200px :height 200px :white-space wrap)
 
       )))
+
+(export 'guests-style)
