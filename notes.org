@@ -118,3 +118,7 @@ NYC Stands with Standing Rock.
 * TODO cl-freetype2 for cl-ascii-art
 * TODO parchment
 * TODO file type icons
+* TODO echarts
+  https://ecomfe.github.io/echarts-examples/public/index.html
+** TODO polar function explorer
+   https://ecomfe.github.io/echarts-examples/public/editor.html?c=line-polar
