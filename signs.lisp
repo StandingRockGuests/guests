@@ -2,45 +2,70 @@
 
 (defparameter *signs-directory* (guests-file "signs/"))
 
-(defdataloader signs)
+(defdataloader signs :json t)
 
-(defun signs-sentence (strings)
-  (iter (for string in strings)
-    (collect (assoc string *signs* :test #'equal))))
+(define-template sign-card
+    :style ((paper-card :margin 5px :cursor pointer)
+            (".sn" :padding 20px))
+  :properties (("index" number 1)
+               ("title" string "foo")
+               ("description" string)
+               ("has-image" boolean)
+               ("image" string)
+               ("image-position" object))
+  :content ((card
+              (:div :class "card-content"
+                    :onclick$ "toggleSign({{index}})"
+                    (:div :hidden$ "{{!image}}"
+                          :style$ "width:{{image-position.w}}px;height:{{image-position.h}}px"
+                          (:img
+                           :style$ "position:absolute;clip:rect({{image-position.top}}px,{{image-position.right}}px,{{image-position.bottom}}px,{{image-position.left}}px);margin-left:-{{image-position.left}}px;margin-top:-{{image-position.top}}px;"
+                           :src$ "/signs/s{{image}}.png"))
+                    (:span :hidden$ "{{image}}" "{{title}}")
+                    (collapse :id "sn-{{index}}"
+                      (:div :class "sn" "{{description}}"))))))
 
-(defun render-signs (stream &optional (sentence))
+(defun render-signs (stream)
   (header-panel :mode "seamed"
     (toolbar :class "time"
       (:span :style "margin-left:0px;" :class "title" "Sign Language")
-      (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
-    (:div
-     :id "signs"
-     (iter (for el in (if sentence (signs-sentence sentence) *signs*))
-       (for index from 1 ;to 200
-            )
-       (destructuring-bind (name image pos text)
-           (if (= (length el) 2)
-               (list (first el) nil nil (second el))
-               el)
-         (card :class "sign"
-           (:div :class "card-content"
-                 :onclick (ps* `(toggle-sign ,index))
-                 (if image
-                   (destructuring-bind (x y w h) pos
-                     (htm (:div
-                           :style (format nil "width:~Apx;height:~Apx;" w h)
-                           (:img
-                            :style (format nil "position:absolute;clip:rect(~Apx,~Apx,~Apx,~Apx);margin-left:-~Apx;margin-top:-~Apx" y (+ x w) (+ y h) x x y)
-                            :src (format nil "/signs/s~A.png" image)))))
-                   (str (if (consp name) (format nil "~{~A~^/~}" name) name)))
-                 (collapse :id (format nil "sn-~A" index)
-                   (:div :class "sn"
-                         (if (stringp text) (esc text)
-                             (esc (car text))))))))))))
+      (icon-button :class "toolbar-icon" :style "margin-left:0px;"
+        :icon "arrow-back" :onclick "page(\"/\");"))
+    (:div :id "signs")))
 
 (in-package :story-js)
 
+(defun signs-json () guests::*signs-json*)
+
 (define-script signs
+  (defvar *signs*)
+
+  (defun setup-signs ()
+    (fetch-json "signs.json"
+                (lambda (el)
+                  (setf *signs* el)
+                  (create-signs))))
+
+  (defun create-signs ()
+    (let ((parent (id "signs")))
+      (loop for sign in *signs*
+            for index from 1 to 100
+            do (create-el
+                :sign-card
+                (create :title (aref sign 0)
+                        :index index
+                        :description (if (= (length sign) 4)
+                                         (aref sign 3) (aref sign 1))
+                        :image (and (= (length sign) 4) (aref sign 1))
+                        :image-position (and (= (length sign) 4)
+                                             (destructuring-bind (x y w h) (aref sign 2)
+                                               (create w w h h top y right (+ x w) bottom (+ y h) left x))))
+                parent))))
+
   (defun toggle-sign (index)
-    (let ((el (id (+ "sn-" index)))))
-    ((@ el toggle))))
+    (let ((el (id (+ "sn-" index))))
+      ((@ el toggle))))
+
+
+
+  )

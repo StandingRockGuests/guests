@@ -3,8 +3,9 @@
 ;; '("great mystery" "work" "sunrise" "you" "heart")
 
 (define-story guests (:title "Standing Rock Guests"
-                      :imports (("style" story-css:guests-style))
-                      :scripts (("guests.js" guests-js))
+                      :imports (("style" story-css:guests-style)
+                                ("sign-card" sign-card-template ))
+                      :scripts (("guests.js" guests-js) ("signs.json" signs-json))
                       :package :guests
                       :modules (:roboto :page :echo :polymer
                                 :iron-flex-layout :iron-icons
@@ -61,14 +62,14 @@
 (define-script main
   (defun select-page (index)
     (let ((pages (id "pages")))
-      (unless (=== (@ pages selected) index)
+      (unless (eql (@ pages selected) index)
         (setf (@ pages selected) index)))
     ((@ echo render)))
 
   (defun setup-routing ()
     (page "/" (lambda () (select-page 1)))
     (page "/time" (lambda () (update-time) (select-page 2)))
-    (page "/signs" (lambda () (select-page 3)))
+    (page "/signs" (lambda () (select-page 3) (setup-signs)))
     (page "/wiki/:page" (lambda (ctx) (select-page 4) (fetch-wiki-page (@ ctx params page))))
     (page "/wiki" (lambda () (select-page 4) (page "/wiki/Home")))
     (page "/timeline" (lambda () (setup-timeline) (select-page 5)))

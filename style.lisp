@@ -24,10 +24,6 @@
 
        )
 
-      (".sign" :cursor pointer :margin 5px :max-width 400px)
-
-      (".sn" :padding 20px)
-
       (".wiki-title" :padding 10px :font ,(var --paper-font-headline))
 
       ("#wiki-body" :overflow-y auto :padding 10px)
