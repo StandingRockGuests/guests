@@ -1,5 +1,7 @@
 (in-package :guests)
 
+;; '("great mystery" "work" "sunrise" "you" "heart")
+
 (define-story guests (:title "Standing Rock Guests"
                       :imports (("style" story-css:guests-style))
                       :scripts (("guests.js" guests-js))
