@@ -3,7 +3,8 @@
 (defdataloader quotes :json t)
 
 (define-template quote-card
-  :style ((".quote" :padding 20px :max-width 500px)
+  :style ((":host" :margin 10px :display inline-block)
+          (".quote" :padding 20px :max-width 500px)
           (".quote .attr" :text-align :right :padding-top 20px))
   :content
   ((card
