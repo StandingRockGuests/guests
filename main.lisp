@@ -4,7 +4,8 @@
 
 (define-story guests (:title "Standing Rock Guests"
                       :imports (("style" story-css:guests-style)
-                                ("sign-card" sign-card-template ))
+                                ("sign-card" sign-card-template)
+                                ("sign-grid" sign-grid-template))
                       :scripts (("guests.js" guests-js) ("signs.json" signs-json))
                       :package :guests
                       :modules (:roboto :page :echo :polymer
