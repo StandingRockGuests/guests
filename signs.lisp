@@ -25,11 +25,17 @@
                       (:div :class "sn" "{{description}}"))))))
 
 (define-template sign-grid
+  :style ((paper-input :width 200px))
+  :properties (("query" string))
   :content
-  ((:h1 "signs")
-   (dom-repeat :items "{{signData}}"
+  ((input :id "sign-search" :bind-value "{{query}}")
+   (dom-repeat :items "{{signData}}" :filter "{{computeFilter(query)}}"
      (:sign-card :title "{{item.title}}" :index "{{index}}" :image "{{item.image}}"
-                 :position "{{item.position}}" :description "{{item.description}}"))))
+                 :position "{{item.position}}" :description "{{item.description}}")))
+  :methods (compute-filter
+            (lambda (query)
+              (lambda (el)
+                (/= ((@ el title index-of) query) -1)))))
 
 (defun render-signs (stream)
   (header-panel :mode "seamed"
