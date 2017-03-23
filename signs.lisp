@@ -9,6 +9,7 @@
             (".sn" :padding 20px))
   :properties (("index" number 1)
                ("title" string "foo")
+               ("synonyms" array nil)
                ("description" string)
                ("image" string nil)
                ("position" object))
@@ -22,6 +23,8 @@
                            :src$ "/signs/s{{image}}.png"))
                     (:span :hidden$ "{{image}}" "{{title}}")
                     (collapse :id "sn-{{index}}"
+                      (dom-repeat :items "{{synonyms}}"
+                        (:span "{{item}} "))
                       (:div :class "sn" "{{description}}"))))))
 
 (define-template sign-grid
@@ -31,11 +34,12 @@
   ((input :id "sign-search" :bind-value "{{query}}")
    (dom-repeat :items "{{signData}}" :filter "{{computeFilter(query)}}"
      (:sign-card :title "{{item.title}}" :index "{{index}}" :image "{{item.image}}"
-                 :position "{{item.position}}" :description "{{item.description}}")))
+                 :position "{{item.position}}" :description "{{item.description}}"
+                 :synonyms "{{item.synonyms}}")))
   :methods (compute-filter
             (lambda (query)
               (lambda (el)
-                (/= ((@ el title index-of) query) -1)))))
+                ((@ el title starts-with) query)))))
 
 (defun render-signs (stream)
   (header-panel :mode "seamed"
@@ -61,14 +65,16 @@
           (loop for sign in data
                 for index from 1 to 100
                 collect
-                (create :title (aref sign 0)
-                        :description (if (= (length sign) 4)
-                                         (aref sign 3) (aref sign 1))
-                        :image (and (= (length sign) 4) (aref sign 1))
-                        :position (and (= (length sign) 4)
-                                       (destructuring-bind (x y w h) (aref sign 2)
-                                         (create w w h h top y right (+ x w)
-                                                 bottom (+ y h) left x)))))))
+                (let ((a0 (aref sign 0)))
+                 (create :title (if (arrayp a0) (aref a0 0) a0)
+                         :synonyms (when (arrayp a0) ((@ a0 shift)) a0)
+                         :description (if (= (length sign) 4)
+                                          (aref sign 3) (aref sign 1))
+                         :image (and (= (length sign) 4) (aref sign 1))
+                         :position (and (= (length sign) 4)
+                                        (destructuring-bind (x y w h) (aref sign 2)
+                                          (create w w h h top y right (+ x w)
+                                                  bottom (+ y h) left x))))))))
 
   (defun toggle-sign (index)
     (let ((el (id (+ "sn-" index))))
