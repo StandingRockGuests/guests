@@ -29,10 +29,6 @@
       ("#wiki-body" :overflow-y auto :padding 10px)
       ("#wiki-tree" :overflow-y auto :padding 10px)
 
-      ("#quotes" :padding 20px)
-      (".quote" :padding 20px)
-      (".quote .attr" :text-align :right :padding-top 20px)
-
       ("#photos" :padding 20px)
       (".photo" :width 200px)
       (".photo .attr" :padding-top 20px :text-align :center)

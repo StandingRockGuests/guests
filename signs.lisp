@@ -51,8 +51,6 @@
 
 (in-package :story-js)
 
-(defun signs-json () guests::*signs-json*)
-
 (define-script signs
 
   (defun setup-signs ()

@@ -1,19 +1,31 @@
 (in-package :guests)
 
-(defdataloader quotes)
+(defdataloader quotes :json t)
+
+(define-template quote-card
+  :style ((".quote" :padding 20px :max-width 500px)
+          (".quote .attr" :text-align :right :padding-top 20px))
+  :content
+  ((card
+     (:div :class "card-content quote"
+           (:div "“{{text}}”")
+           (:div :class "attr"
+                 (:div "— {{name}}")
+                 (:div "{{description}}"))))))
 
 (defun render-quotes (stream)
   (header-panel :mode "seamed"
     (toolbar :class "time"
       (:span :style "margin-left:0px;" :class "title" "Quotes")
-      (icon-button :class "toolbar-icon" :style "margin-left:0px;" :icon "arrow-back" :onclick "page(\"/\");"))
-    (:div :id "quotes"
-          (iter (for (text name desc) in *quotes*)
-            (for index from 1)
-            (card :class "pack"
-              (:div :class "card-content quote" :style "max-width:500px;"
-                    (:div :class "text" "“" (esc text) "”")
-                    (:div :class "attr"
-                          (:div :class "name" "— " (esc name))
-                          (:div :class "desc" (esc desc)))))))))
+      (icon-button :class "toolbar-icon" :style "margin-left:0px;"
+        :icon "arrow-back" :onclick "page(\"/\");"))
+    (:template-grid :source "quotes.json" :renderer "renderQuote")
+    (script
+      (defun render-quote (el)
+        (create-el "quote-card" (create :text (aref el 0)
+                                        :name (aref el 1)
+                                        :description (aref el 2)))))))
+
+
+
 

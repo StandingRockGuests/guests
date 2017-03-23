@@ -5,18 +5,22 @@
 (define-story guests (:title "Standing Rock Guests"
                       :imports (("style" story-css:guests-style)
                                 ("sign-card" sign-card-template)
-                                ("sign-grid" sign-grid-template))
-                      :scripts (("guests.js" guests-js) ("signs.json" signs-json))
+                                ("sign-grid" sign-grid-template)
+                                ("template-grid" template-grid-template)
+                                ("quote-card" quote-card-template))
+                      :scripts (("guests.js" guests-js)
+                                ("signs.json" signs-json)
+                                ("quotes.json" quotes-json))
                       :package :guests
                       :modules (:roboto :page :echo :polymer
                                 :iron-flex-layout :iron-icons
-                                :iron-collapse
+                                :iron-collapse :iron-ajax
                                 :neon-animatable :neon-animated-pages
                                 :fade-in-animation :fade-out-animation
                                 :paper-ripple :paper-button :paper-icon-button
                                 :paper-header-panel :paper-toolbar
                                 :paper-item :paper-listbox :paper-drawer-panel
-                                :paper-card :images :packery
+                                :paper-card :paper-input :images :packery
                                 :suncalc :wiki :vis :files
                                 :image-gallery)
                       :page-args (:body-class "fullbleed layout vertical")

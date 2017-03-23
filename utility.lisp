@@ -37,7 +37,8 @@
                      (read-from-string (slurp-file filename))
                      (warn "Missing data file ~S." filename)))
            ,@(when json `((setf ,json-var (json:encode-json-to-string ,var)))))
-         (values)))))
+         (values))
+       (defun ,(intern (format nil "~A-JSON" name) :story-js) () ,json-var))))
 
 (defun load-data-files ()
   (iter (for name in *data-files*)
