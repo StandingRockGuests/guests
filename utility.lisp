@@ -11,16 +11,6 @@
                                                 :if-does-not-exist :create)
      ,@body))
 
-(defun mkstr (&rest args)
-  (with-output-to-string (s)
-    (dolist (a args) (when a (princ a s)))))
-
-(defun symb (&rest args)
-  (values (intern (apply #'mkstr args))))
-
-(defun ksymb (&rest args)
-  (values (intern (apply #'mkstr args) :keyword)))
-
 (defvar *data-files* nil)
 
 (defmacro defdataloader (name &key json)
@@ -43,9 +33,4 @@
 (defun load-data-files ()
   (iter (for name in *data-files*)
     (funcall (symb 'load- name))))
-
-(defun string-starts-with (string prefix &key (test #'char=))
-  "Returns true if STRING starts with PREFIX."
-  (let ((mismatch (mismatch prefix string :test test)))
-    (or (not mismatch) (= mismatch (length prefix)))))
 

@@ -10,7 +10,7 @@
         (when (and (typep a 'element)
                    (equal (local-name a) "a"))
           (let ((val (string-value a)))
-            (when (string-starts-with val "JPEG")
+            (when (starts-with-p val "JPEG")
               (push (list :image (trim val) (attribute-value a "href")) rtn))))
         (when (and (typep a 'element)
                    (equal (local-name a) "title"))
@@ -37,7 +37,7 @@
 
 (defun search-loc-images (&optional (q "LOT 12319"))
   (iter (for (link text) in (page-links (http-request (format nil "http://www.loc.gov/pictures/search/?va=exact&co%21=coll&st=grid&q=~A&fi=number&sg=true&op=PHRASE" (url-encode q :utf-8)))))
-    (when (string-starts-with link "//www.loc.gov/pictures/item/")
+    (when (starts-with-p link "//www.loc.gov/pictures/item/")
       (collect (string-right-trim '(#\/) (subseq link 28))))))
 
 
